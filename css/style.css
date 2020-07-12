@@ -104,3 +104,13 @@ padding: 0px;
     padding: 20px;
     text-align: center;
   } */
+  .wh{
+    margin: 50px !important;
+    padding: 5px;
+    background-color: wheat;
+    height: 50px;
+    width: 100px;
+  }
+  .demo{
+    justify-content: space-around;
+  }

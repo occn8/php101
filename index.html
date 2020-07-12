@@ -21,19 +21,103 @@
 
 </head>
 
-<body>
+<body class="bg-dark">
+  <header class="main-header" id="header"
+    style="background: url(img/KampalaSerenaHotel.jpg) no-repeat; background-size: cover;">
+    <div class="bg-color">
+      <nav class="navbar navbar-expand-md navbar-dark">
+        <div class="navbar-header">
+          <a href="" class="navbar-brand"><img src="favicon.ico" class="navimg" alt="">
+            <span class="brand-letter">UMU</span>
+          </a>
+        </div>
+
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item active"><a class="nav-link" href="">Home</a></li>
+            <li class="nav-item"><a class="nav-link" href="#infom">Info</a></li>
+
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-toggle="dropdown">Academics</a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <a class="dropdown-item" href="pages/login.html">Faculties</a>
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item" href="pages/login.html">Schools</a>
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item" href="pages/login.html">Library</a>
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item" href="pages/login.html">E-learning</a>
+              </div>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-toggle="dropdown">Admssions</a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <a class="dropdown-item" href="pages/login.html">How to Apply</a>
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item" href="pages/login.html">Online Application</a>
+              </div>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-toggle="dropdown"
+                aria-haspopup="true" aria-expanded="false">
+                About Us
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <a class="dropdown-item" href="pages/login.html">Campuses</a>
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item" href="pages/login.html">Umu silver jubilie</a>
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item" href="pages/login.html">Directorates</a>
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item" href="pages/login.html">Contact Us</a>
+              </div>
+            </li>
+            <li class="nav-item"><a class="nav-link" href="pages/login.html">LogIn</a></li>
+            <li>
+              <?php  if (isset($_SESSION['username'])) : ?>
+              <a href="index.php?logout='1'" style="color: white;">logout</a>
+              <?php endif ?>
+            </li>
+
+          </ul>
+        </div>
+      </nav>
+
+      <div class="container text-center">
+        <div class="wrapper wow fadeInUp delay-05s">
+
+          <h1 class="top-title">Be the <a href="" class="typewrite" data-period="2000"
+              data-type='[ "Champion", "Achiver", "Dreamer", "Success" ]'>
+              <span class="wrap"></span>
+            </a> You are
+          </h1>
+          <h3 class="title"> <span class="first-letter">U</span>ganda <span class="first-letter">M</span>artyrs <span
+              class="first-letter">U</span>niversity
+          </h3>
+          <h4 class="sub-title"> Making A Difference.</h4>
+          <button type="submit" class="btn btn-submit"><a id="sub" href="">Apply Now</a></button>
+        </div>
+      </div>
+  </header>
 
   <div class="container">
-    <div class="slider demo" >
-      <div> Slide  1 </div>
-      <div> Slide  2 </div>
-      <div> Slide  3 </div>
+    <div class="slider demo">
+      <div class="wh"> Slide 1 </div>
+      <div class="wh"> Slide 2 </div>
+      <div class="wh"> Slide 3 </div>
+      <div class="wh"> Slide 11 </div>
+      <div class="wh"> Slide 21 </div>
+      <div class="wh"> Slide 31 </div>
     </div>
   </div>
 
   <script src="js/jquery.min.js"></script>
   <script src="js/slick.js"></script>
-  <script src="js/slick.min.js"></script>
   <script src="js/jquery.easing.min.js"></script>
   <script src="js/bootstrap.min.js"></script>
   <script src="js/wow.js"></script>
@@ -42,9 +126,45 @@
   <script src="js/popper.min.js"></script>
 
   <script type="text/javascript">
-    $(document).ready(function(){
-  $('.demo').slick();
-});
+    $(document).ready(function () {
+      $('.demo').slick(
+        {
+          dots: true,
+          infinite: false,
+          speed: 300,
+          slidesToShow: 3,
+          slidesToScroll: 4,
+          // slidesToScroll: 1,
+          // autoplay: true,
+          // autoplaySpeed: 2000,
+          responsive: [
+            {
+              breakpoint: 1024,
+              settings: {
+                slidesToShow: 3,
+                slidesToScroll: 3,
+                infinite: true,
+                dots: true
+              }
+            },
+            {
+              breakpoint: 600,
+              settings: {
+                slidesToShow: 2,
+                slidesToScroll: 2
+              }
+            },
+            {
+              breakpoint: 480,
+              settings: {
+                slidesToShow: 1,
+                slidesToScroll: 1
+              }
+            }
+          ]
+        }
+      );
+    });
   </script>
 
 </body>
