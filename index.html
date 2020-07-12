@@ -9,6 +9,8 @@
   <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
   <link rel="stylesheet" type="text/css" href="css/font-awesome.min.css">
   <link rel="stylesheet" type="text/css" href="css/animate.css">
+  <link rel="stylesheet" type="text/css" href="css/slick.css">
+  <link rel="stylesheet" type="text/css" href="css/slick-theme.css">
   <link rel="stylesheet" type="text/css" href="css/style.css">
   <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
         integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
@@ -21,15 +23,30 @@
 
 <body>
 
-
+  <div class="container">
+    <div class="slider demo" >
+      <div> Slide  1 </div>
+      <div> Slide  2 </div>
+      <div> Slide  3 </div>
+    </div>
+  </div>
 
   <script src="js/jquery.min.js"></script>
+  <script src="js/slick.js"></script>
+  <script src="js/slick.min.js"></script>
   <script src="js/jquery.easing.min.js"></script>
   <script src="js/bootstrap.min.js"></script>
   <script src="js/wow.js"></script>
   <script src="js/custom.js"></script>
   <script src="contactform/contactform.js"></script>
   <script src="js/popper.min.js"></script>
+
+  <script type="text/javascript">
+    $(document).ready(function(){
+  $('.demo').slick();
+});
+  </script>
+
 </body>
 
 </html>
