@@ -22,13 +22,12 @@
 </head>
 
 <body class="bg-dark">
-  <header class="main-header" id="header"
-    style="background: url(img/KampalaSerenaHotel.jpg) no-repeat; background-size: cover;">
+  <header class="main-header" id="header" style="background: url(images/Sun.jpg) no-repeat; background-size: cover;">
     <div class="bg-color">
       <nav class="navbar navbar-expand-md navbar-dark">
         <div class="navbar-header">
-          <a href="" class="navbar-brand"><img src="favicon.ico" class="navimg" alt="">
-            <span class="brand-letter">UMU</span>
+          <a href="" class="navbar-brand"><img src="images/logo.svg" class="navimg" alt="">
+            <span class="brand-letter">UgandaAirlines</span>
           </a>
         </div>
 
@@ -40,20 +39,9 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav ml-auto">
             <li class="nav-item active"><a class="nav-link" href="">Home</a></li>
-            <li class="nav-item"><a class="nav-link" href="#infom">Info</a></li>
+            <li class="nav-item"><a class="nav-link" href="pages/bookFlight.html">Book flight</a></li>
+            <li class="nav-item"><a class="nav-link" href="">Destinations</a></li>
 
-            <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-toggle="dropdown">Academics</a>
-              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                <a class="dropdown-item" href="pages/login.html">Faculties</a>
-                <div class="dropdown-divider"></div>
-                <a class="dropdown-item" href="pages/login.html">Schools</a>
-                <div class="dropdown-divider"></div>
-                <a class="dropdown-item" href="pages/login.html">Library</a>
-                <div class="dropdown-divider"></div>
-                <a class="dropdown-item" href="pages/login.html">E-learning</a>
-              </div>
-            </li>
             <li class="nav-item dropdown">
               <a class="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-toggle="dropdown">Admssions</a>
               <div class="dropdown-menu" aria-labelledby="navbarDropdown">
@@ -62,25 +50,21 @@
                 <a class="dropdown-item" href="pages/login.html">Online Application</a>
               </div>
             </li>
+            <li class="nav-item"><a class="nav-link" href="pages/contact.html">Contact Us</a></li>
             <li class="nav-item dropdown">
               <a class="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-toggle="dropdown"
                 aria-haspopup="true" aria-expanded="false">
-                About Us
+                About
               </a>
               <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                <a class="dropdown-item" href="pages/login.html">Campuses</a>
+                <a class="dropdown-item" href="pages/login.html">Uganda Airlines</a>
                 <div class="dropdown-divider"></div>
-                <a class="dropdown-item" href="pages/login.html">Umu silver jubilie</a>
-                <div class="dropdown-divider"></div>
-                <a class="dropdown-item" href="pages/login.html">Directorates</a>
-                <div class="dropdown-divider"></div>
-                <a class="dropdown-item" href="pages/login.html">Contact Us</a>
+                <a class="dropdown-item" href="pages/login.html">Uganda</a>
               </div>
             </li>
-            <li class="nav-item"><a class="nav-link" href="pages/login.html">LogIn</a></li>
-            <li>
+            <li class="nav-item">
               <?php  if (isset($_SESSION['username'])) : ?>
-              <a href="index.php?logout='1'" style="color: white;">logout</a>
+              <a class="nav-link" href="index.php?logout='1'" style="color: white;">Logout</a>
               <?php endif ?>
             </li>
 
@@ -89,6 +73,7 @@
       </nav>
 
       <div class="container text-center">
+
         <div class="wrapper wow fadeInUp delay-05s">
 
           <h1 class="top-title">Be the <a href="" class="typewrite" data-period="2000"
@@ -96,25 +81,174 @@
               <span class="wrap"></span>
             </a> You are
           </h1>
-          <h3 class="title"> <span class="first-letter">U</span>ganda <span class="first-letter">M</span>artyrs <span
-              class="first-letter">U</span>niversity
+          <h3 class="title"> Fly the Crane to the Pearl of Africa
           </h3>
-          <h4 class="sub-title"> Making A Difference.</h4>
-          <button type="submit" class="btn btn-submit"><a id="sub" href="">Apply Now</a></button>
+          <h4 class="sub-title"> Travel further.</h4>
+          <button type="submit" class="btn btn-submit"><a id="sub" href="">Book Flight</a></button>
         </div>
+
+
       </div>
+
   </header>
 
-  <div class="container">
-    <div class="slider demo">
-      <div class="wh"> Slide 1 </div>
-      <div class="wh"> Slide 2 </div>
-      <div class="wh"> Slide 3 </div>
-      <div class="wh"> Slide 11 </div>
-      <div class="wh"> Slide 21 </div>
-      <div class="wh"> Slide 31 </div>
+  <div class="container" style="position: absolute;top: 400px;margin: 8vw;">
+    <div id="myCarousel" class="carousel slide carousel-fade" data-ride="carousel">
+      <ol class="carousel-indicators">
+        <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+        <li data-target="#myCarousel" data-slide-to="1"></li>
+        <li data-target="#myCarousel" data-slide-to="2"></li>
+      </ol>
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img src="images/hos2.jpg" class="d-block w-100 rounded" alt="...">
+          <svg class="bd-placeholder-img" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg"
+            preserveAspectRatio="xMidYMid slice" focusable="false" role="img">
+            <rect width="100%" height="100%" fill="#777" /></svg>
+          <div class="container">
+            <div class="carousel-caption text-left">
+              <h1>Example headline.</h1>
+              <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at
+                eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+              <p><a class="btn btn-lg btn-primary" href="#" role="button">Sign up today</a></p>
+            </div>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <svg class="bd-placeholder-img rounded" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg"
+            preserveAspectRatio="xMidYMid slice" focusable="false" role="img">
+            <rect width="100%" height="100%" fill="#666" /></svg>
+          <div class="container">
+            <div class="carousel-caption">
+              <h1>Another example headline.</h1>
+              <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at
+                eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+              <p><a class="btn btn-lg btn-primary" href="#" role="button">Learn more</a></p>
+            </div>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <svg class="bd-placeholder-img rounded" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg"
+            preserveAspectRatio="xMidYMid slice" focusable="false" role="img">
+            <rect width="100%" height="100%" fill="#444" /></svg>
+          <div class="container">
+            <div class="carousel-caption text-right">
+              <h1>One more for good measure.</h1>
+              <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at
+                eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+              <p><a class="btn btn-lg btn-primary" href="#" role="button">Browse gallery</a></p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <a class="carousel-control-prev" href="#myCarousel" role="button" data-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="sr-only">Previous</span>
+      </a>
+      <a class="carousel-control-next" href="#myCarousel" role="button" data-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
+      </a>
     </div>
   </div>
+  <div style="height: 400px;"></div>
+  <div class="container">
+    <div class="slider demo">
+      <div class="wh"><img src="images/hos.jpg" class="d-block w-100 rounded" alt="..."></div>
+      <div class="wh"><img src="images/hos2.jpg" class="d-block w-100 rounded" alt="..."></div>
+      <div class="wh"><img src="images/pi.jpeg" class="d-block w-100 rounded" alt="..."></div>
+      <div class="wh"><img src="images/pi1.jpg" class="d-block w-100 rounded" alt="..."> </div>
+      <div class="wh"><img src="images/Sun.jpg" class="d-block w-100 rounded" alt="..."> </div>
+      <div class="wh"><img src="images/Sun.jpg" class="d-block w-100 rounded" alt="..."> </div>
+    </div>
+  </div>
+
+  <footer id="o-footer" role="contentinfo">
+    <div class="o-container">
+      <div class="row row-p b-md">
+        <div class="col-md-3 wow fadeInUp delay-05s">
+          <div class="o-widget">
+            <h3>About Us</h3>
+            <p class="o-footer-into">Uganda Martyrs university has been known as a university of excellence
+              and quality that makes a
+              difference in the lives of those who come into contact with it.A place of tranquil, peace
+              and warm hearted people.</p>
+            <p class="o-footer-into"> Located 80(Eighty) kilometres from Kampala along Kampala-Masaka
+              Highway</p>
+            <p class="o-footer-into">Uganda Martyrs university has been known as a university of excellence
+              and quality that makes a
+              difference in the lives of those who come into contact with it.A place of tranquil, peace
+              and warm hearted people.</p>
+          </div>
+        </div>
+
+        <div class="col-md-3 wow fadeInUp delay-05s">
+          <div class="o-widget">
+            <h3>Quick Access</h3>
+            <ul class="o-footer-links">
+              <li><a href="">Phone: +25F 788 793471</a></li>
+              <li><a href="">Email: ugair@air.co.ug</a></li>
+              <li><a href="">Live Chat</a></li>
+              <li><a href="">Terms of services</a></li>
+              <li><a href="">Privacy Policy</a></li>
+              <li><a href="">Developer</a></li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="col-md-3 wow fadeInUp delay-05s">
+          <div class="o-widget">
+            <h3>Fly with Us</h3>
+            <ul class="o-footer-links">
+              <li><a href="">Business class</a></li>
+              <li><a href="">Economy Class</a></li>
+              <li><a href="">Check-In</a></li>
+              <li><a href="">Baggage guidelines</a></li>
+              <li><a href="">Preferred Seating</a></li>
+              <li><a href="">Special Assistance</a></li>
+              <li><a href="">Traveling with Children</a></li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="col-md-3 wow fadeInUp delay-05s">
+          <div class="o-widget">
+            <h3>Read</h3>
+            <ul class="o-footer-links">
+              <li><a href="">Connect with Us</a></li>
+              <li><a href="">Careers</a></li>
+              <li><a href="">Booking Policy</a></li>
+              <li><a href="">Conditions of Carriage</a></li>
+              <li><a href="">Privacy Policy</a></li>
+              <li><a href="">Terms & Conditions</a></li>
+              <li><a href="">Website security Policy</a></li>
+              <li><a href="">Acceptable Use Policy</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="row copyright">
+        <div class="col-md-12">
+          <p class="pull-left">
+            <small class="block">&copy; 2020 UgandaAirlines. | All Rights Reserved.</small>
+            <small class="block">• Designed by occn8 <a href="http://occn8.com/" target="_blank">occn8.com</a>
+            </small>
+          </p>
+          <p class="pull-right">
+          <ul class="o-social-icons pull-right">
+            <a class="btn btn0" href="#"><i class="fab fa-facebook-f"></i></a>
+            <a class="btn btn0" href="#"><i class="fab fa-google"></i></a>
+            <a class="btn btn0" href="#"><i class="fab fa-twitter"></i></a>
+            <a class="btn btn0" href="#"><i class="fab fa-github"></i></a>
+            <a class="btn btn0" href="#"><i class="fab fa-youtube"></i></a>
+          </ul>
+          </p>
+        </div>
+      </div>
+
+    </div>
+  </footer>
 
   <script src="js/jquery.min.js"></script>
   <script src="js/slick.js"></script>
