@@ -56,7 +56,7 @@ ul {
   color: white;
   font-size: 24px;
   /* text-transform: lowercase; */
-  font-weight: 700;
+  font-weight: 600;
   padding: 0px;
   letter-spacing: 2px;
   height: inherit;
@@ -66,22 +66,24 @@ ul {
 .navbar .navbar-nav>.active>a:focus,
 .navbar .navbar-nav>.active>a:hover {
  
-  color: rgb(255, 221, 158);
+  color: rgb(255, 230, 0) !important;
   background-color: transparent;
 }
 .navbar .navbar-nav>li>a {
+  font-family: 'GoogleSans' !important;
   font-size: 12px;
+  font-weight: 700;
   color: whitesmoke !important;
   padding: 10px 20px;
   text-transform: uppercase;
   background-color: transparent;
 }  
 .navbar .navbar-nav>li>a:active {
-  color: wheat !important;
+  color: rgb(255, 230, 0) !important;
 }
 .navbar .navbar-nav>li>a:hover,
 .navbar .navbar-nav>li>a:focus {
-  color: rgb(255, 221, 158);
+  color: rgb(255, 230, 0) !important;
 }
 
 
@@ -116,7 +118,7 @@ ul {
   font-size:4vw;
   /* font-size: 90px; */
   font-family: 'Montserrat' !important;
-  font-weight: 500;
+  font-weight: 550;
   color: white;
   line-height: 8vw;
   letter-spacing: 4px;
@@ -432,9 +434,9 @@ padding: 0px;
     text-align: center;
   } */
   .wh{
-    margin: 50px !important;
+    margin: 10px !important;
     padding: 5px;
-    height: 100px;
+    /* height: 120px; */
     /* width: 100px; */
   }
   .demo{
@@ -453,7 +455,7 @@ padding: 0px;
 
 /* /{{{[[::[[[[[[[[[[..[[[[[[[[..[[[[[[[[[[[[[[..]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]}}} */
 .pulse-button {
-  /* position: relative; */
+  position: relative;top: -20px;
   width: 10px;
   height: 10px;
   border: none;
