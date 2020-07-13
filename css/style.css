@@ -19,7 +19,7 @@ body {
 .shad{
   box-shadow:0 5px 5px 0 black;
 }
-.first-letter,.second-letter{
+.first-letter{
   color: rgb(255, 230, 0);
   font-family: 'stonehen' !important;
   font-size: 30px;
@@ -27,14 +27,6 @@ body {
   outline: none;
   padding: 0px;
   }
-  .s{
-    color: white;
-    font-family: 'Montserrat' !important;
-    font-size: 30px;
-    margin: 0px;
-    outline: none;
-    padding: 0px;
-    }
 ol,
 ul {
   list-style: none;
@@ -47,6 +39,7 @@ ul {
 .bg-color {
   background-color: RGBA(0, 0, 0, 0.41);
 }
+
 
 .nav>li>a {
   padding: 0px;
@@ -401,23 +394,30 @@ h4 {
     color: #777;
   }
   
-/* .first-letter{
-color: #CC1B00;
-font-family: 'stonehen' !important;
-font-size: 1em;
-margin: 0px;
-outline: none;
-padding: 0px;
-} */
-/* .bg-image {
-    background-image: url("images/Sun.jpg");
-    filter: blur(8px);
-    -webkit-filter: blur(8px);
-    height: 100%;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
+.carousel-cont {
+    height: 500px;
+    width: 1000px;
+    background: inherit;
+    position: absolute;
+    top: 70%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+
   }
+  .carousel-caption{
+    background-color: rgb(0,0,0);
+    background-color: rgba(0,0,0, 0.4); 
+    /* border: 3px solid #f1f1f1; */
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+    width: 80%;
+    padding: 20px;
+    text-align: center; 
+   }
+  /*
   .bg-text {
     background-color: rgb(0,0,0);
     background-color: rgba(0,0,0, 0.4); 
