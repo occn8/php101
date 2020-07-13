@@ -8,14 +8,33 @@ body {
     font-family: "Montserrat";
     src: url("../fonts/Montserrat-Regular.ttf");
 }
-.brand-letter{
-  color: white;
-  font-family: 'Montserrat' !important;
+@font-face {
+  font-family: "GoogleSans";
+  src: url("../fonts/GoogleSans-Regular.ttf");
+}
+@font-face {
+  font-family: "stonehen";
+  src: url("../fonts/stonehen.ttf");
+}
+.shad{
+  box-shadow:0 5px 5px 0 black;
+}
+.first-letter,.second-letter{
+  color: rgb(255, 230, 0);
+  font-family: 'stonehen' !important;
   font-size: 30px;
   margin: 0px;
   outline: none;
   padding: 0px;
   }
+  .s{
+    color: white;
+    font-family: 'Montserrat' !important;
+    font-size: 30px;
+    margin: 0px;
+    outline: none;
+    padding: 0px;
+    }
 ol,
 ul {
   list-style: none;
@@ -34,7 +53,7 @@ ul {
 }
 
 .navbar .navbar-brand {
-  color: rgb(255, 230, 0);
+  color: white;
   font-size: 24px;
   /* text-transform: lowercase; */
   font-weight: 700;
@@ -105,9 +124,11 @@ ul {
   /* text-transform: uppercase; */
   padding: 15px 0px;
 }
-
+.btn-submit a{
+  color: black;
+}
 .btn-submit {
-  background-color: #CC1B00;
+  background-color: rgb(255, 230, 0);
   padding: 10px 40px;
   position: relative;
 }
@@ -429,3 +450,23 @@ padding: 0px;
     min-width: 100%;
     height: 32rem;
   }
+
+/* /{{{[[::[[[[[[[[[[..[[[[[[[[..[[[[[[[[[[[[[[..]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]}}} */
+.pulse-button {
+  /* position: relative; */
+  width: 10px;
+  height: 10px;
+  border: none;
+  box-shadow: 0 0 0 0 rgb(255, 230, 0);
+  border-radius: 40%;
+  background-color: rgb(255, 230, 0);
+  background-repeat: no-repeat;
+  cursor: pointer;
+  animation: pulse 1.25s infinite cubic-bezier(0.66, 0, 0, 1);
+}
+.pulse-button:hover 
+{ background-color: white;
+  -webkit-animation: none;-moz-animation: none;-ms-animation: none;animation: none;
+}
+
+@keyframes pulse {to {box-shadow: 0 0 0 45px rgba(232, 76, 61, 0);}}
