@@ -4,6 +4,7 @@ body {
     overflow-x: hidden;
     background-color: #faf4f5;
 }
+
 @font-face {
     font-family: "Montserrat";
     src: url("../fonts/Montserrat-Regular.ttf");
@@ -16,6 +17,21 @@ body {
   font-family: "stonehen";
   src: url("../fonts/stonehen.ttf");
 }
+
+#site-header {
+	position: fixed;
+  height: 60px;
+  background: rgba(0,0,0, .4);
+	top: 0;
+	width: 100%;
+	z-index: 100;
+	transition: all .3s ease;
+	box-shadow: 0 1px 25px rgba(0,0,0, .1);
+}
+#site-header.hide {
+	top: -53px;
+}
+
 .shad{
   box-shadow:0 5px 5px 0 black;
 }
@@ -64,7 +80,7 @@ ul {
 }
 .navbar .navbar-nav>li>a {
   font-family: 'GoogleSans' !important;
-  font-size: 12px;
+  font-size: 12px; text-shadow: 2px 2px #000000;
   font-weight: 700;
   color: whitesmoke !important;
   padding: 10px 20px;
