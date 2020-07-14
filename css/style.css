@@ -532,8 +532,7 @@ h4 {
   .wh{
     margin: 10px !important;
     padding: 5px;
-    /* height: 120px; */
-    /* width: 100px; */
+    
   }
   .demo{
     justify-content: space-around;
@@ -568,3 +567,12 @@ h4 {
 }
 
 @keyframes pulse {to {box-shadow: 0 0 0 45px rgba(232, 76, 61, 0);}}
+
+.cad {
+  box-shadow: 0 4px 8px 0 rgba(7, 7, 7, 0.2);
+  transition: 0.3s;
+}
+
+.cad:hover {
+  box-shadow: 0 8px 16px 0 rgba(126, 125, 125, 0.2);
+}
