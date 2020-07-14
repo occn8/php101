@@ -17,7 +17,15 @@ body {
   font-family: "stonehen";
   src: url("../fonts/stonehen.ttf");
 }
-
+#header{
+  position: relative;
+}
+#glare{
+  background: rgba(0, 0, 0, 0.7);top: 10px;
+  height: 100vh;
+  width: 100vw;
+  position: fixed;
+}
 #site-header {
 	position: fixed;
   height: 53px;
@@ -43,6 +51,14 @@ body {
   outline: none;
   padding: 0px;
   }
+  .other-letter{
+    color: white;
+    font-family: 'GoogleSans' !important;
+    font-size: 30px;
+    margin: 0px;
+    outline: none;
+    padding: 0px;
+    }
 ol,
 ul {
   list-style: none;
@@ -362,7 +378,11 @@ h4 {
     .bd-placeholder-img-lg {
       font-size: 3.5rem;
     }
-  }.form-signin {
+  }
+  
+  .form-signin {
+    position: absolute;
+    top: 10px;left: 35vw;
     width: 100%;
     max-width: 420px;
     padding: 15px;
@@ -411,6 +431,64 @@ h4 {
     font-size: 12px;
     color: #777;
   }
+  .remember{
+    color: white;
+  }
+
+  .fixed{
+    position: fixed;
+    top: 10px;
+    height: 100vh;
+    width: 100vw;
+  }
+#stripes {
+    height: 100vh;
+    background: linear-gradient(150deg, rgb(28, 28, 29) 15%, #272b2c 70%, #505552 94%);
+    clip-path: polygon(100% 0, 100% 70%, 0 99%, 0 0);
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: repeat(12, 1fr);
+}
+
+#stripes :nth-child(1) {
+  
+    grid-area: 1 / 2 / span 5 / span 2;
+    background-color: rgb(177, 255, 51);
+    clip-path: polygon(0 0, 100% 0%, 100% 60%, 0% 100%);
+}
+
+#stripes :nth-child(2) {
+  border-top-left-radius: 20%;
+    grid-area: 4 / 3 / span 3 / span 2;
+    background-color: #e42929;
+    clip-path: polygon(0 0, 100% 0%, 100% 74%, 0% 100%);
+    transform: translateY(-30px);
+}
+
+#stripes :nth-child(3) {
+    grid-area: 1 / 5 / span 2 / span 2;
+    background-color: #ffec40;
+    clip-path: polygon(0 0, 100% 0, 99% 5%, 0 70%);
+}
+
+#stripes :nth-child(4) {
+  border-bottom-left-radius: 20px;
+    grid-area: 3 / 11 / span 3 / span 2;
+    clip-path: polygon(0 23%, 100% 0%, 100% 77%, 0% 100%);
+    background-color: #52ff0d;
+}
+
+#stripes :nth-child(5) {
+  border-top-right-radius: 30%;
+    grid-area: 8 / 1 / span 5 / span 4;
+    clip-path: polygon(0 23%, 100% 0%, 100% 80%, 0% 100%);
+    transform: translateY(10px);
+    background-color: #fff01f;
+}
+
+
+
+
   
 .carousel-cont {
     height: 500px;

@@ -19,6 +19,14 @@
 </head>
 
 <body class="bg-dark">
+  <div id="stripes" class="fixed">
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+  <div id="glare"></div>
   <header class="main-header" id="header"
     style="background: url(images/pi1.jpg) no-repeat; background-size: cover;height: 95vh;">
     <div class="bg-color">
@@ -87,187 +95,205 @@
 
   </header>
 
-  <div class="container" style="position: relative;top: -40px;">
-    <div id="myCarousel" class="carousel slide carousel-fade shad" data-ride="carousel">
-      <ol class="carousel-indicators">
-        <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-        <li data-target="#myCarousel" data-slide-to="1"></li>
-        <li data-target="#myCarousel" data-slide-to="2"></li>
-      </ol>
-      <div class="carousel-inner">
-        <div class="carousel-item active">
-          <img src="images/ugair1.jpg" class="d-block w-100 rounded" alt="...">
-          <svg class="bd-placeholder-img" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg"
-            preserveAspectRatio="xMidYMid slice" focusable="false" role="img">
-            <rect width="100%" height="100%" fill="#777" /></svg>
-          <div class="container">
-            <div class="carousel-cont">
-              <div class="carousel-caption text-left">
-                <h1>Example headline.</h1>
-                <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at
-                  eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
-                <p><a class="btn btn-lg btn-primary" href="#" role="button">Sign up today</a></p>
+  <main>
+    <div class="container" style="position: relative;top: -40px;">
+      <div id="myCarousel" class="carousel slide carousel-fade shad" data-ride="carousel">
+        <ol class="carousel-indicators">
+          <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+          <li data-target="#myCarousel" data-slide-to="1"></li>
+          <li data-target="#myCarousel" data-slide-to="2"></li>
+        </ol>
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img src="images/ugair1.jpg" class="d-block w-100 rounded" alt="...">
+            <svg class="bd-placeholder-img" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg"
+              preserveAspectRatio="xMidYMid slice" focusable="false" role="img">
+              <rect width="100%" height="100%" fill="#777" /></svg>
+            <div class="container">
+              <div class="carousel-cont">
+                <div class="carousel-caption text-left">
+                  <h1>Example headline.</h1>
+                  <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at
+                    eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+                  <p><a class="btn btn-lg btn-primary" href="#" role="button">Sign up today</a></p>
+                </div>
               </div>
             </div>
           </div>
-        </div>
-        <div class="carousel-item">
-          <img src="images/ugair.jpg" class="d-block w-100 rounded" alt="...">
-          <svg class="bd-placeholder-img rounded" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg"
-            preserveAspectRatio="xMidYMid slice" focusable="false" role="img">
-            <rect width="100%" height="100%" fill="#666" /></svg>
-          <div class="container">
-            <div class="carousel-cont">
-              <div class="carousel-caption">
-                <h1>Another example headline.</h1>
-                <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at
-                  eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
-                <p><a class="btn btn-lg btn-primary" href="#" role="button">Learn more</a></p>
+          <div class="carousel-item">
+            <img src="images/ugair.jpg" class="d-block w-100 rounded" alt="...">
+            <svg class="bd-placeholder-img rounded" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg"
+              preserveAspectRatio="xMidYMid slice" focusable="false" role="img">
+              <rect width="100%" height="100%" fill="#666" /></svg>
+            <div class="container">
+              <div class="carousel-cont">
+                <div class="carousel-caption">
+                  <h1>Another example headline.</h1>
+                  <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at
+                    eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+                  <p><a class="btn btn-lg btn-primary" href="#" role="button">Learn more</a></p>
+                </div>
               </div>
-            </div>
 
+            </div>
+          </div>
+          <div class="carousel-item">
+            <img src="images/airp.jpg" class="d-block w-100 rounded" alt="...">
+            <svg class="bd-placeholder-img rounded" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg"
+              preserveAspectRatio="xMidYMid slice" focusable="false" role="img">
+              <rect width="100%" height="100%" fill="#444" /></svg>
+            <div class="container">
+              <div class="carousel-cont">
+                <div class="carousel-caption text-right">
+                  <h1>One more for good measure.</h1>
+                  <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at
+                    eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+                  <p><a class="btn btn-lg btn-primary" href="#" role="button">Browse gallery</a></p>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
-        <div class="carousel-item">
-          <img src="images/airp.jpg" class="d-block w-100 rounded" alt="...">
-          <svg class="bd-placeholder-img rounded" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg"
-            preserveAspectRatio="xMidYMid slice" focusable="false" role="img">
-            <rect width="100%" height="100%" fill="#444" /></svg>
-          <div class="container">
-            <div class="carousel-cont">
-              <div class="carousel-caption text-right">
-                <h1>One more for good measure.</h1>
-                <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at
-                  eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
-                <p><a class="btn btn-lg btn-primary" href="#" role="button">Browse gallery</a></p>
+        <a class="carousel-control-prev" href="#myCarousel" role="button" data-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="sr-only">Previous</span>
+        </a>
+        <a class="carousel-control-next" href="#myCarousel" role="button" data-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="sr-only">Next</span>
+        </a>
+      </div>
+    </div>
+
+    <div class="container">
+      <div>
+        <h3>Our crew</h3>
+      </div>
+      <div class="slider demo">
+        <div class="wh"><img src="images/hos.jpg" class="d-block w-100 rounded" alt=""></div>
+        <div class="wh"><img src="images/pi.jpeg" class="d-block w-100 rounded" alt=""></div>
+        <div class="wh"><img src="images/hos2.jpg" class="d-block w-100 rounded" alt=""></div>
+        <div class="wh"><img src="images/pi1.jpg" class="d-block w-100 rounded" alt=""> </div>
+        <div class="wh"><img src="images/hos.jpg" class="d-block w-100 rounded" alt=""></div>
+        <div class="wh"><img src="images/pi.jpeg" class="d-block w-100 rounded" alt=""></div>
+      </div>
+    </div>
+
+    <div class="container">
+      <div>
+        <h3>Our Airport</h3>
+      </div>
+      <div class="slider demo">
+        <div class="wh"><img src="images/ugair3.jpg" class="d-block w-100 rounded" alt=""> </div>
+        <div class="wh"><img src="images/airp.png" class="d-block w-100 rounded" alt=""></div>
+        <div class="wh"><img src="images/pi.jpeg" class="d-block w-100 rounded" alt=""></div>
+        <div class="wh"><img src="images/hos.jpg" class="d-block w-100 rounded" alt=""></div>
+        <div class="wh"><img src="images/pi.jpeg" class="d-block w-100 rounded" alt=""></div>
+        <div class="wh"><img src="images/hos2.jpg" class="d-block w-100 rounded" alt=""></div>
+      </div>
+    </div>
+    <section class="home-newsletter">
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-12">
+            <div class="single">
+              <h2>Subscribe to our Newsletter</h2>
+              <div class="input-group">
+                <input type="email" class="form-control" placeholder="Enter your email">
+                <span class="input-group-btn">
+                  <button class="btn btn-theme" type="submit">Subscribe</button>
+                </span>
               </div>
             </div>
           </div>
         </div>
       </div>
-      <a class="carousel-control-prev" href="#myCarousel" role="button" data-slide="prev">
-        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-        <span class="sr-only">Previous</span>
-      </a>
-      <a class="carousel-control-next" href="#myCarousel" role="button" data-slide="next">
-        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-        <span class="sr-only">Next</span>
-      </a>
-    </div>
-  </div>
+    </section>
+    <footer id="o-footer" role="contentinfo">
+      <div class="o-container">
+        <div class="row row-p b-md">
+          <div class="col-md-3 wow fadeInUp delay-05s">
+            <div class="o-widget">
+              <h3>About Us</h3>
+              <p class="o-footer-into">Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi
+                porta gravida at
+                eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+              <p class="o-footer-into"> Located a few(Yes few) kilometres from Kampala along Kampala-Entebbe
+                Highway</p>
+              <p class="o-footer-into">Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi
+                porta gravida at
+                eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+            </div>
+          </div>
 
-  <div class="container">
-    <div>
-      <h3>Our crew</h3>
-    </div>
-    <div class="slider demo">
-      <div class="wh"><img src="images/hos.jpg" class="d-block w-100 rounded" alt=""></div>
-      <div class="wh"><img src="images/pi.jpeg" class="d-block w-100 rounded" alt=""></div>
-      <div class="wh"><img src="images/hos2.jpg" class="d-block w-100 rounded" alt=""></div>
-      <div class="wh"><img src="images/pi1.jpg" class="d-block w-100 rounded" alt=""> </div>
-      <div class="wh"><img src="images/hos.jpg" class="d-block w-100 rounded" alt=""></div>
-      <div class="wh"><img src="images/pi.jpeg" class="d-block w-100 rounded" alt=""></div>
-    </div>
-  </div>
+          <div class="col-md-3 wow fadeInUp delay-05s">
+            <div class="o-widget">
+              <h3>Quick Access</h3>
+              <ul class="o-footer-links">
+                <li><a href="">Phone: +25F 788 793471</a></li>
+                <li><a href="">Email: ugair@air.co.ug</a></li>
+                <li><a href="">Live Chat</a></li>
+                <li><a href="">Terms of services</a></li>
+                <li><a href="">Privacy Policy</a></li>
+                <li><a href="">Developer</a></li>
+              </ul>
+            </div>
+          </div>
 
-  <div class="container">
-    <div>
-      <h3>Our Airport</h3>
-    </div>
-    <div class="slider demo">
-      <div class="wh"><img src="images/ugair3.jpg" class="d-block w-100 rounded" alt=""> </div>
-      <div class="wh"><img src="images/airp.png" class="d-block w-100 rounded" alt=""></div>
-      <div class="wh"><img src="images/pi.jpeg" class="d-block w-100 rounded" alt=""></div>
-      <div class="wh"><img src="images/hos.jpg" class="d-block w-100 rounded" alt=""></div>
-      <div class="wh"><img src="images/pi.jpeg" class="d-block w-100 rounded" alt=""></div>
-      <div class="wh"><img src="images/hos2.jpg" class="d-block w-100 rounded" alt=""></div>
-    </div>
-  </div>
+          <div class="col-md-3 wow fadeInUp delay-05s">
+            <div class="o-widget">
+              <h3>Fly with Us</h3>
+              <ul class="o-footer-links">
+                <li><a href="">Business class</a></li>
+                <li><a href="">Economy Class</a></li>
+                <li><a href="">Check-In</a></li>
+                <li><a href="">Baggage guidelines</a></li>
+                <li><a href="">Preferred Seating</a></li>
+                <li><a href="">Special Assistance</a></li>
+                <li><a href="">Traveling with Children</a></li>
+              </ul>
+            </div>
+          </div>
 
-  <footer id="o-footer" role="contentinfo">
-    <div class="o-container">
-      <div class="row row-p b-md">
-        <div class="col-md-3 wow fadeInUp delay-05s">
-          <div class="o-widget">
-            <h3>About Us</h3>
-            <p class="o-footer-into">Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi
-              porta gravida at
-              eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
-            <p class="o-footer-into"> Located a few(Yes few) kilometres from Kampala along Kampala-Entebbe
-              Highway</p>
-            <p class="o-footer-into">Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi
-              porta gravida at
-              eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+          <div class="col-md-3 wow fadeInUp delay-05s">
+            <div class="o-widget">
+              <h3>Read</h3>
+              <ul class="o-footer-links">
+                <li><a href="">Connect with Us</a></li>
+                <li><a href="">Careers</a></li>
+                <li><a href="">Booking Policy</a></li>
+                <li><a href="">Conditions of Carriage</a></li>
+                <li><a href="">Privacy Policy</a></li>
+                <li><a href="">Terms & Conditions</a></li>
+                <li><a href="">Website security Policy</a></li>
+                <li><a href="">Acceptable Use Policy</a></li>
+              </ul>
+            </div>
           </div>
         </div>
 
-        <div class="col-md-3 wow fadeInUp delay-05s">
-          <div class="o-widget">
-            <h3>Quick Access</h3>
-            <ul class="o-footer-links">
-              <li><a href="">Phone: +25F 788 793471</a></li>
-              <li><a href="">Email: ugair@air.co.ug</a></li>
-              <li><a href="">Live Chat</a></li>
-              <li><a href="">Terms of services</a></li>
-              <li><a href="">Privacy Policy</a></li>
-              <li><a href="">Developer</a></li>
+        <div class="row copyright">
+          <div class="col-md-12">
+            <p class="pull-left">
+              <small class="block">&copy; 2020 UgandaAirlines. | All Rights Reserved.</small>
+              <small class="block">• Designed by occn8 <a href="http://occn8.com/" target="_blank">occn8.com</a>
+              </small>
+            </p>
+            <p class="pull-right">
+            <ul class="o-social-icons pull-right">
+              <a class="btn btn0" href="#"><i class="fab fa-facebook-f"></i></a>
+              <a class="btn btn0" href="#"><i class="fab fa-google"></i></a>
+              <a class="btn btn0" href="#"><i class="fab fa-twitter"></i></a>
+              <a class="btn btn0" href="#"><i class="fab fa-github"></i></a>
+              <a class="btn btn0" href="#"><i class="fab fa-youtube"></i></a>
             </ul>
+            </p>
           </div>
         </div>
 
-        <div class="col-md-3 wow fadeInUp delay-05s">
-          <div class="o-widget">
-            <h3>Fly with Us</h3>
-            <ul class="o-footer-links">
-              <li><a href="">Business class</a></li>
-              <li><a href="">Economy Class</a></li>
-              <li><a href="">Check-In</a></li>
-              <li><a href="">Baggage guidelines</a></li>
-              <li><a href="">Preferred Seating</a></li>
-              <li><a href="">Special Assistance</a></li>
-              <li><a href="">Traveling with Children</a></li>
-            </ul>
-          </div>
-        </div>
-
-        <div class="col-md-3 wow fadeInUp delay-05s">
-          <div class="o-widget">
-            <h3>Read</h3>
-            <ul class="o-footer-links">
-              <li><a href="">Connect with Us</a></li>
-              <li><a href="">Careers</a></li>
-              <li><a href="">Booking Policy</a></li>
-              <li><a href="">Conditions of Carriage</a></li>
-              <li><a href="">Privacy Policy</a></li>
-              <li><a href="">Terms & Conditions</a></li>
-              <li><a href="">Website security Policy</a></li>
-              <li><a href="">Acceptable Use Policy</a></li>
-            </ul>
-          </div>
-        </div>
       </div>
-
-      <div class="row copyright">
-        <div class="col-md-12">
-          <p class="pull-left">
-            <small class="block">&copy; 2020 UgandaAirlines. | All Rights Reserved.</small>
-            <small class="block">• Designed by occn8 <a href="http://occn8.com/" target="_blank">occn8.com</a>
-            </small>
-          </p>
-          <p class="pull-right">
-          <ul class="o-social-icons pull-right">
-            <a class="btn btn0" href="#"><i class="fab fa-facebook-f"></i></a>
-            <a class="btn btn0" href="#"><i class="fab fa-google"></i></a>
-            <a class="btn btn0" href="#"><i class="fab fa-twitter"></i></a>
-            <a class="btn btn0" href="#"><i class="fab fa-github"></i></a>
-            <a class="btn btn0" href="#"><i class="fab fa-youtube"></i></a>
-          </ul>
-          </p>
-        </div>
-      </div>
-
-    </div>
-  </footer>
+    </footer>
+  </main>
   <script src="js/hide.js"></script>
   <script src="js/jquery.min.js"></script>
   <script src="js/slick.js"></script>
