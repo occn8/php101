@@ -24,7 +24,8 @@
         <span></span>
         <span></span>
         <span></span>
-    </div><form method="post" action="logIn.php">
+    </div>
+    <!-- <form method="post" action="logIn.php">
 
 		<?php include('errors.php'); ?>
 
@@ -42,8 +43,9 @@
 		<p>
 			<small>Not yet a member?</small> <a href="register.php">Sign up</a>
 		</p>
-	</form>
-    <form class="form-signin">
+	</form> -->
+    <form class="form-signin" form method="post" action="logIn.php">
+    <?php include('errors.php'); ?>
         <div class="text-center mb-4">
             <img class="mb-4" src="../assets/brand/bootstrap-solid.svg" alt="" width="72" height="72">
             <h1 class="h3 mb-3 font-weight-normal">
@@ -58,12 +60,12 @@
         </div>
 
         <div class="form-label-group">
-            <input type="email" id="inputEmail" class="form-control" placeholder="Email address" required autofocus>
-            <label for="inputEmail">Email address</label>
+            <input type="text" name="username" id="inputName" class="form-control" placeholder="Username" required autofocus>
+            <label for="inputName">Username</label>
         </div>
 
         <div class="form-label-group">
-            <input type="password" id="inputPassword" class="form-control" placeholder="Password" required>
+            <input type="password" name="password" id="inputPassword" class="form-control" placeholder="Password" required>
             <label for="inputPassword">Password</label>
         </div>
 
@@ -72,7 +74,7 @@
                 <input type="checkbox" value="remember-me"> <span class="remember">Remember me</span>
             </label>
         </div>
-        <button class="btn btn-lg btn-warning btn-block" type="submit">Sign in</button>
+        <button class="btn btn-lg btn-warning btn-block" type="submit" name="login_user">Sign in</button>
         <p class="mt-5 mb-3 text-muted text-center">&copy; 2017-2020</p>
     </form>
 
