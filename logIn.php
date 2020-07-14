@@ -25,25 +25,7 @@
         <span></span>
         <span></span>
     </div>
-    <!-- <form method="post" action="logIn.php">
-
-		<?php include('errors.php'); ?>
-
-		<div class="input-group">
-			<small><label>Username</label></small>
-			<input type="text" name="username" >
-		</div>
-		<div class="input-group">
-			<small><label>Password</label></small>
-			<input type="password" name="password">
-		</div>
-		<div class="input-group">
-			<button type="submit" class="btn" name="login_user">Login</button>
-		</div>
-		<p>
-			<small>Not yet a member?</small> <a href="register.php">Sign up</a>
-		</p>
-	</form> -->
+  
     <form class="form-signin" form method="post" action="logIn.php">
     <?php include('errors.php'); ?>
         <div class="text-center mb-4">

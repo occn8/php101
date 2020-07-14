@@ -87,7 +87,7 @@
             </li>
             <li class="nav-item">
               <?php  if (isset($_SESSION['username'])) : ?>
-              <a class="nav-link" href="index.php?logout='1'" style="color: white;">Logout</a>
+              <a class="nav-link" href="index.php?logout='1'" style="color: yellow !important;">Logout</a>
               <?php endif ?>
             </li>
 
@@ -98,7 +98,7 @@
       <div class="container text-center">
         <div class="wrapper wow fadeInUp delay-05s">
           <h1 class="top-title">Be the <a href="" class="typewrite" data-period="2000"
-              data-type='[ "Champion", "Achiver", "Dreamer", "Success" ]'>
+              data-type='[ "Explorer", "Traveler", "Dreamer" ]'>
               <span class="wrap"></span>
             </a> You are
           </h1>
@@ -110,8 +110,7 @@
       </div>
 
   </header>
-
-  <main>
+<section class="carous">
     <div class="container" style="position: relative;top: -40px;">
       <div id="myCarousel" class="carousel slide carousel-fade shad" data-ride="carousel">
         <ol class="carousel-indicators">
@@ -180,7 +179,8 @@
         </a>
       </div>
     </div>
-
+ </section>
+ <section id="crew" class="section-padding ">
     <div class="container">
       <div>
         <h3>Our crew</h3>
@@ -194,7 +194,9 @@
         <div class="wh"><img src="images/pi.jpeg" class="d-block w-100 rounded cad" alt=""></div>
       </div>
     </div>
+ </section>
 
+<section id="airport" class="section-padding">
     <div class="container">
       <div>
         <h3>Our Airport</h3>
@@ -208,6 +210,7 @@
         <div class="wh"><img src="images/hos2.jpg" class="d-block w-100 rounded" alt=""></div>
       </div>
     </div>
+</section>
     <section class="home-newsletter">
       <div class="container">
         <div class="row">
@@ -309,7 +312,7 @@
 
       </div>
     </footer>
-  </main>
+
   <script src="js/hide.js"></script>
   <script src="js/jquery.min.js"></script>
   <script src="js/slick.js"></script>
