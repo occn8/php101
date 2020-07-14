@@ -12,9 +12,6 @@
   <link rel="stylesheet" type="text/css" href="css/slick.css">
   <link rel="stylesheet" type="text/css" href="css/slick-theme.css">
   <link rel="stylesheet" type="text/css" href="css/style.css">
-  <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
-        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
-        crossorigin="anonymous"></script> -->
 
   <link rel="icon" href="favicon.ico">
   <title>Uganda Airlines</title>
@@ -22,13 +19,14 @@
 </head>
 
 <body class="bg-dark">
-  <header class="main-header" id="header" style="background: url(images/pi1.jpg) no-repeat; background-size: cover;">
+  <header class="main-header" id="header"
+    style="background: url(images/pi1.jpg) no-repeat; background-size: cover;height: 95vh;">
     <div class="bg-color">
       <nav class="navbar navbar-expand-md navbar-dark" id="site-header">
         <div class="navbar-header">
           <a href="" class="navbar-brand">
             <span class="first-letter">U</span>ganda<span class="first-letter">A</span>irlines <button
-                class="pulse-button"></button>
+              class="pulse-button"></button>
           </a>
         </div>
 
@@ -83,7 +81,7 @@
           <h3 class="title"> Fly the Crane to the Pearl of Africa
           </h3>
           <h4 class="sub-title"> Travel further.</h4>
-          <button type="submit" class="btn btn-submit"><a id="sub" href="">Book Flight</a></button>
+          <button type="submit" class="btn btn-submit"><a id="sub" href="pages/bookFlight.html">Book Flight</a></button>
         </div>
       </div>
 
@@ -270,7 +268,7 @@
 
     </div>
   </footer>
-<script src="js/hide.js"></script>
+  <script src="js/hide.js"></script>
   <script src="js/jquery.min.js"></script>
   <script src="js/slick.js"></script>
   <script src="js/jquery.easing.min.js"></script>
@@ -284,6 +282,9 @@
     $(document).ready(function () {
       $('.demo').slick(
         {
+          prevArrow: "<img class='a-left control-c prev slick-prev' src='images/left-arrow.png'>",
+          nextArrow: "<img class='a-right control-c next slick-next' src='images/right-arrow.png'>",
+
           dots: true,
           infinite: false,
           speed: 300,
