@@ -1,4 +1,4 @@
-<?php include('../server.php') ?>
+<?php include('server.php') ?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -6,13 +6,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="../fontawesome/css/all.css">
-    <link rel="stylesheet" type="text/css" href="../css/bootstrap.min.css">
-    <link rel="stylesheet" type="text/css" href="../css/font-awesome.min.css">
-    <link rel="stylesheet" type="text/css" href="../css/animate.css">
-    <link rel="stylesheet" type="text/css" href="../css/style.css">
+    <link rel="stylesheet" href="fontawesome/css/all.css">
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="css/animate.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
 
-    <link rel="icon" href="../favicon.ico">
+    <link rel="icon" href="favicon.ico">
     <title>Uganda Airlines logIn</title>
 
 </head>
@@ -24,7 +24,7 @@
         <span></span>
         <span></span>
         <span></span>
-    </div><form method="post" action="login.php">
+    </div><form method="post" action="logIn.php">
 
 		<?php include('errors.php'); ?>
 
@@ -76,13 +76,13 @@
         <p class="mt-5 mb-3 text-muted text-center">&copy; 2017-2020</p>
     </form>
 
-    <script src="../js/jquery.min.js"></script>
-    <script src="../js/jquery.easing.min.js"></script>
-    <script src="../js/bootstrap.min.js"></script>
-    <script src="../js/wow.js"></script>
-    <script src="../js/custom.js"></script>
-    <script src="../contactform/contactform.js"></script>
-    <script src="../js/popper.min.js"></script>
+    <script src="js/jquery.min.js"></script>
+    <script src="js/jquery.easing.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/wow.js"></script>
+    <script src="js/custom.js"></script>
+    <script src="contactform/contactform.js"></script>
+    <script src="js/popper.min.js"></script>
 </body>
 
 </html>
