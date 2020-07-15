@@ -57,6 +57,11 @@
             </label>
         </div>
         <button class="btn btn-lg btn-warning btn-block" type="submit" name="login_user">Sign in</button>
+        <br>
+        <p>
+			<small>Not yet a member?</small> <a href="register.php">Sign up</a>
+		</p>
+
         <p class="mt-5 mb-3 text-muted text-center">&copy; 2017-2020</p>
     </form>
 
