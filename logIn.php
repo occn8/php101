@@ -36,8 +36,6 @@
                     class="pulse-button"></button>
             </h1>
             <p class="remember">Fly the Crane to the Pearl of Africa <br><br>
-                <a href="https://caniuse.com/#feat=css-placeholder-shown">Works in latest Chrome, Safari, and
-                    Firefox.</a>
             </p>
         </div>
 

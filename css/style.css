@@ -383,22 +383,21 @@ h4 {
     }
   }
   .back-but{
+    margin-left: 5px;
     position: fixed;
     top: 10px;
     color: white;
-    padding-left: 25px;
-    padding-right: 25px;
-    padding-top: 15px;
-    padding-bottom: 15px;
+    padding: 10px 20px;
     border-radius: 20px;
     background-color:rgba(255, 208, 0, 0.7); 
   }
   .back-but:hover{
+    padding: 9px 19px;
     color: black;
     background-color:rgba(255, 208, 0, 1.0);
   }
   .about{
-    background-color: RGBA(39, 47, 51, 0.6);
+    background-color: rgba(24, 30, 32, 0.7);
     position: absolute;
     top: 0;
     width: 100%;
