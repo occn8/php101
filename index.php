@@ -74,17 +74,8 @@
               </div>
             </li>
             <li class="nav-item"><a class="nav-link" href="pages/contact.html">Contact Us</a></li>
-            <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-toggle="dropdown"
-                aria-haspopup="true" aria-expanded="false">
-                About
-              </a>
-              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                <a class="dropdown-item" href="pages/login.html">Uganda Airlines</a>
-                <div class="dropdown-divider"></div>
-                <a class="dropdown-item" href="pages/login.html">Uganda</a>
-              </div>
-            </li>
+            <li class="nav-item"><a class="nav-link" href="pages/about.html">About Us</a></li>
+          
             <li class="nav-item">
               <?php  if (isset($_SESSION['username'])) : ?>
               <a class="nav-link" href="index.php?logout='1'" style="color: yellow !important;">Logout</a>

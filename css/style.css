@@ -170,7 +170,9 @@ h3.txt-tl {
   font-size: 24px;
   line-height: 1.35;
 }
-
+p{
+  color: white;
+}
 a,
 a:hover {
   color: white;
@@ -380,22 +382,49 @@ h4 {
       font-size: 3.5rem;
     }
   }
+  .back-but{
+    position: fixed;
+    top: 10px;
+    color: white;
+    padding-left: 25px;
+    padding-right: 25px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    border-radius: 20px;
+    background-color:rgba(255, 208, 0, 0.7); 
+  }
+  .back-but:hover{
+    color: black;
+    background-color:rgba(255, 208, 0, 1.0);
+  }
+  .about{
+    background-color: RGBA(39, 47, 51, 0.6);
+    position: absolute;
+    top: 0;
+    width: 100%;
+    max-width: 100%;
+    padding: 25px;
+  }
   .form-register{
     background-color: RGBA(39, 47, 51, 0.6);
     position: absolute;
     width: 100%;
-    max-width: 800px;
-    padding: 15px;
+    max-width: 900px;
+    padding: 25px;
+    top: 10px;
+    margin: auto;
+    border-radius: 10px;
   }
   .form-signin {
     background-color: RGBA(39, 47, 51, 0.6);
     position: absolute;
-    top: 10px;left: 35vw;
+    top: 10px;
+    left: 35vw;
     width: 100%;
     max-width: 420px;
     padding: 15px;
     margin: auto;
-    border-radius: 5%;
+    border-radius: 10px;
   }
   
   .form-label-group {
@@ -447,7 +476,7 @@ h4 {
 
   .fixed{
     position: fixed;
-    top: 10px;
+    top: 1px;
     height: 100vh;
     width: 100vw;
   }
