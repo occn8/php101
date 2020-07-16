@@ -63,7 +63,7 @@
           <ul class="navbar-nav ml-auto">
             <li class="nav-item active"><a class="nav-link" href="">Home</a></li>
             <li class="nav-item"><a class="nav-link" href="pages/bookFlight.html">Book flight</a></li>
-            <li class="nav-item"><a class="nav-link" href="">Destinations</a></li>
+            <li class="nav-item"><a class="nav-link" href="pages/destinations.html">Destinations</a></li>
 
             <li class="nav-item dropdown">
               <a class="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-toggle="dropdown">Admssions</a>

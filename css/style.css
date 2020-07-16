@@ -278,7 +278,7 @@ h4 {
 .btn0 {
   width: 40px;
   height: 30px;
-  background: #f1f1f1ab;
+  background: rgb(255, 208, 0);
   margin: 10px;
   border-radius: 30%;
   box-shadow: 0 5px 10px -5px #7e7c7c70;
@@ -289,8 +289,8 @@ h4 {
 
 .btn0 i {
   /* line-height: 15px; */
-  /* padding:5px; */color: #d60004 !important;
-  font-size: 15px;
+  /* padding:5px; */color: #000000 !important;
+  font-size: 16px;
   transition: 0.2s linear;
 }
 
@@ -308,7 +308,7 @@ h4 {
   position: absolute;
   width: 120%;
   height: 150%;
-  background: rgb(255, 230, 0);
+  background: rgb(255, 255, 254);
   transform: rotate(45deg);
   left: -120%;
   top: 90%;
