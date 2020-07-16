@@ -18,7 +18,7 @@
 </head>
 
 <body class="bg-light">
-    <div id="stripes">
+    <div id="stripes" class="fixed">
         <span></span>
         <span></span>
         <span></span>
@@ -26,10 +26,12 @@
         <span></span>
     </div>
   
+<div class="form-container">
+  <center>
     <form class="form-signin" form method="post" action="logIn.php">
     <?php include('errors.php'); ?>
         <div class="text-center mb-4">
-            <img class="mb-4" src="../assets/brand/bootstrap-solid.svg" alt="" width="72" height="72">
+            <img class="mb-4" src="images/logo.png" alt="" width="72" height="72">
             <h1 class="h3 mb-3 font-weight-normal">
                 <span class="first-letter">U</span><span class="other-letter">ganda</span><span
                     class="first-letter">A</span><span class="other-letter">irlines</span> <button
@@ -62,7 +64,9 @@
 
         <p class="mt-5 mb-3 text-muted text-center">&copy; 2017-2020</p>
     </form>
-
+    </center>
+ </div>
+ 
     <script src="js/jquery.min.js"></script>
     <script src="js/jquery.easing.min.js"></script>
     <script src="js/bootstrap.min.js"></script>

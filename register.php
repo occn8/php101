@@ -18,7 +18,7 @@
 </head>
 
 <body>
-<div id="stripes">
+<div id="stripes" class="fixed">
         <span></span>
         <span></span>
         <span></span>
@@ -26,41 +26,86 @@
         <span></span>
     </div>
 
-  <div class="container">
-  <form method="post" action="register.php">
+<div class="form-container">
+  <center>
+  <form method="post" action="register.php" class="needs-validation form-register">
    
    <?php include('errors.php'); ?>
+   <div class="text-center mb-4">
+            <img class="mb-4" src="images/logo.png" alt="" width="72" height="72">
+            <h1 class="h3 mb-3 font-weight-normal">
+                <span class="first-letter">U</span><span class="other-letter">ganda</span><span
+                    class="first-letter">A</span><span class="other-letter">irlines</span> <button
+                    class="pulse-button"></button>
+            </h1>
+            <p class="remember">Fly the Crane to the Pearl of Africa <br><br>
+            </p>
+    </div>
+
+   <div class="row">
+        <div class="col-md-6 mb-3">
+          <label class="white" for="firstName">First name</label>
+          <input type="text" class="form-control" id="firstName" value="" required>
+          <div class="invalid-feedback">
+            Valid first name is required.
+          </div>
+        </div>
+        <div class="col-md-6 mb-3">
+          <label class="white" for="lastName">Last name</label>
+          <input type="text" class="form-control" id="lastName" value="" required>
+          <div class="invalid-feedback">
+            Valid last name is required.
+          </div>
+        </div>
+    </div>
+
+   <div class="form-group">
+     <label class="white">Username</label>
+     <input type="text" name="username" value="<?php echo $username; ?>" class="form-control">
+     <div class="invalid-feedback">
+            Valid last name is required.
+    </div>
+   </div>
+   <div class="form-group">
+     <label class="white">Email</label>
+     <input type="email" name="email" value="<?php echo $email; ?>" class="form-control">
+     <div class="invalid-feedback">
+            Valid last name is required.
+    </div>
+   </div>
+
+   <div class="form-row">
+   <div class="form-group col-md-6">
+     <label class="white">Password</label>
+     <input type="password" name="password_1" class="form-control">
+   </div>
+   <div class="form-group col-md-6">
+     <label class="white">Confirm password</label>
+     <input type="password" name="password_2" class="form-control">
+   </div>
+   </div>
+
+   <div class="form-check">
+      <input class="form-check-input" type="checkbox" value="" id="invalidCheck" required>
+      <label class="form-check-label white" for="invalidCheck">
+        Agree to terms and conditions
+      </label>
+      <div class="invalid-feedback">
+        You must agree before submitting.
+      </div>
+    </div><br>
 
    <div class="input-group">
-     <small><label>Username</label></small>
-     <input type="text" name="username" value="<?php echo $username; ?>">
+     <button type="submit" class="btn btn-warning" name="reg_user">Register</button>
    </div>
-   <div class="input-group">
-     <small><label>Email</label></small>
-     <input type="email" name="email" value="<?php echo $email; ?>">
-   </div>
-   <div class="input-group">
-     <small><label>Password</label></small>
-     <input type="password" name="password_1">
-   </div>
-   <div class="input-group">
-     <small><label>Confirm password</label></small>
-     <input type="password" name="password_2">
-   </div>
-   <div class="radi">
-     <label>Gender:</label>
-     <input type="radio" name="gender" value="female"><small>Female</small>
-     <input type="radio" name="gender" value="male"><small>Male</small> <br>
-   </div>
-   <div class="input-group">
-     <button type="submit" class="btn" name="reg_user">Register</button>
-   </div>
+   <br>
    <p>
      <small>Already a member?</small> <a href="logIn.php">Sign in</a>
    </p>
  </form>
- 
- <form class="needs-validation form-register" novalidate>
+</center>
+ </div>
+ <!-- <form class="needs-validation form-register" novalidate>
           <div class="row">
             <div class="col-md-6 mb-3">
               <label for="firstName">First name</label>
@@ -84,7 +129,7 @@
               <div class="input-group-prepend">
                 <span class="input-group-text">@</span>
               </div>
-              <input type="text" class="form-control" id="username" placeholder="Username" required>
+              <input type="text" class="form-control" id="username" required>
               <div class="invalid-feedback" style="width: 100%;">
                 Your username is required.
               </div>
@@ -93,7 +138,7 @@
 
           <div class="mb-3">
             <label for="email">Email <span class="text-muted">(Optional)</span></label>
-            <input type="email" class="form-control" id="email" placeholder="you@example.com">
+            <input type="email" class="form-control" id="email"  placeholder="you@example.com">
             <div class="invalid-feedback">
               Please enter a valid email address for shipping updates.
             </div>
@@ -102,11 +147,11 @@
           <div class="form-row">
           <div class="form-group col-md-6">
             <label for="inputPassword4">Password</label>
-            <input type="password" class="form-control" id="inputPassword4">
+            <input type="password" class="form-control" name="password_1" id="inputPassword4">
           </div>
           <div class="form-group col-md-6">
             <label for="inputPassword4">Password Confirm</label>
-            <input type="password" class="form-control" id="inputPassword4">
+            <input type="password" class="form-control" name="password_2" id="inputPassword4">
           </div>
            </div>
            
@@ -164,9 +209,9 @@
       </div>
     </div>
   </div>
-          <button class="btn btn-primary btn-md" type="submit">Register</button>
-        </form>
-  </div>
+          <button class="btn btn-primary btn-md" name="reg_user" type="submit">Register</button>
+        </form> -->
+  
 
   <script>
 // Example starter JavaScript for disabling form submissions if there are invalid fields

@@ -49,6 +49,7 @@
       <nav class="navbar navbar-expand-md navbar-dark" id="site-header">
         <div class="navbar-header">
           <a href="" class="navbar-brand">
+          <img src="favicon.ico" class="navimg" alt="">
             <span class="first-letter">U</span>ganda<span class="first-letter">A</span>irlines <button
               class="pulse-button"></button>
           </a>
@@ -66,11 +67,11 @@
             <li class="nav-item"><a class="nav-link" href="pages/destinations.html">Destinations</a></li>
 
             <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-toggle="dropdown">Admssions</a>
+              <a class="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-toggle="dropdown">Flights</a>
               <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                <a class="dropdown-item" href="pages/login.html">How to Apply</a>
+                <a class="dropdown-item" href="">To Uganda</a>
                 <div class="dropdown-divider"></div>
-                <a class="dropdown-item" href="pages/login.html">Online Application</a>
+                <a class="dropdown-item" href="">From Uganda</a>
               </div>
             </li>
             <li class="nav-item"><a class="nav-link" href="pages/contact.html">Contact Us</a></li>

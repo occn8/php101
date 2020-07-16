@@ -371,17 +371,14 @@ h4 {
 .bd-placeholder-img {
     font-size: 1.125rem;
     text-anchor: middle;
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
     user-select: none;
   }
-
   @media (min-width: 768px) {
     .bd-placeholder-img-lg {
       font-size: 3.5rem;
     }
   }
+ 
   .back-but{
     margin-left: 5px;
     position: fixed;
@@ -404,25 +401,25 @@ h4 {
     max-width: 100%;
     padding: 25px;
   }
-  .form-register{
-    background-color: RGBA(39, 47, 51, 0.6);
+  .form-container{
+    padding-top: 25px;
     position: absolute;
+    top: 0;
     width: 100%;
-    max-width: 900px;
+    max-width: 100%;
+  }
+  .form-register{
+    background-color: rgba(24, 30, 32, 0.7);
+    width: 800px;
+    max-width: 95%;
     padding: 25px;
-    top: 10px;
-    margin: auto;
     border-radius: 10px;
   }
   .form-signin {
     background-color: RGBA(39, 47, 51, 0.6);
-    position: absolute;
-    top: 10px;
-    left: 35vw;
     width: 100%;
     max-width: 420px;
     padding: 15px;
-    margin: auto;
     border-radius: 10px;
   }
   
@@ -621,4 +618,8 @@ h4 {
 
 .cad:hover {
   box-shadow: 0 8px 16px 0 rgba(126, 125, 125, 0.2);
+}
+
+.white{
+  color: white;
 }
