@@ -29,8 +29,55 @@
     <div class="container">
       <center>
         <h1><b>Book Your flight Here</b></h1>
-
       </center>
+      <h4 class="mb-3">Payment</h4>
+
+      <div class="d-block my-3">
+        <div class="custom-control custom-radio">
+          <input id="credit" name="paymentMethod" type="radio" class="custom-control-input" checked required>
+          <label class="custom-control-label white" for="credit">Credit card</label>
+        </div>
+        <div class="custom-control custom-radio">
+          <input id="debit" name="paymentMethod" type="radio" class="custom-control-input" required>
+          <label class="custom-control-label white" for="debit">Debit card</label>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-6 mb-3">
+          <label for="cc-name" class="white">Name on card</label>
+          <input type="text" class="form-control" id="cc-name" placeholder="" required>
+          <small class="text-muted">Full name as displayed on card</small>
+          <div class="invalid-feedback">
+            Name on card is required
+          </div>
+        </div>
+        <div class="col-md-6 mb-3">
+          <label for="cc-number" class="white">Credit card number</label>
+          <input type="text" class="form-control" id="cc-number" placeholder="" required>
+          <div class="invalid-feedback">
+            Credit card number is required
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-3 mb-3">
+          <label for="cc-expiration" class="white">Expiration</label>
+          <input type="text" class="form-control" id="cc-expiration" placeholder="" required>
+          <div class="invalid-feedback">
+            Expiration date required
+          </div>
+        </div>
+        <div class="col-md-3 mb-3">
+          <label for="cc-cvv" class="white">CVV</label>
+          <input type="text" class="form-control" id="cc-cvv" placeholder="" required>
+          <div class="invalid-feedback">
+            Security code required
+          </div>
+        </div>
+      </div>
+      <hr class="mb-4">
+      <button class="btn btn-primary btn-lg btn-block" type="submit">Continue to checkout</button><br>
+
     </div>
 
     <footer id="o-footer" class="abst" role="contentinfo">

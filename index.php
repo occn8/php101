@@ -128,7 +128,7 @@
             </div>
           </div>
           <div class="carousel-item">
-            <img src="images/ugair.jpg" class="d-block w-100 rounded" alt="...">
+            <img src="images/ugair1.jpg" class="d-block w-100 rounded" alt="...">
             <svg class="bd-placeholder-img rounded" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg"
               preserveAspectRatio="xMidYMid slice" focusable="false" role="img">
               <rect width="100%" height="100%" fill="#666" /></svg>

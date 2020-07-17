@@ -84,7 +84,55 @@
      <input type="password" name="password_2" class="form-control">
    </div>
    </div>
+   <div class="mb-3">
+       <label for="address" class="white">Address</label>
+       <input type="text" class="form-control" id="address" placeholder="12 Main St" required>
+       <div class="invalid-feedback">
+         Please enter your Home address.
+       </div>
+    </div>
 
+    <div class="mb-3">
+       <label for="address2" class="white">Address 2 <span class="text-muted">(Optional)</span></label>
+       <input type="text" class="form-control" id="address2" placeholder="Apartment or suite">
+   </div>
+
+   <div class="row">
+      <div class="col-md-5 mb-3">
+        <label for="country" class="white">Country</label>
+        <select class="custom-select d-block w-100" id="country" required>
+          <option value="">Choose..</option>
+          <option>Uganda</option>
+          <option>Kenya</option>
+          <option>Tanzania</option>
+          <option>Rwanda</option>
+        </select>
+        <div class="invalid-feedback">
+          Please select a valid country.
+        </div>
+      </div>
+      <div class="col-md-4 mb-3">
+        <label for="state" class="white">District | State</label>
+        <select class="custom-select d-block w-100" id="state" required>
+          <option value="">Choose..</option>
+          <option>Entebbe</option>
+          <option>Kampala</option>
+          <option>Nairobi</option>
+          <option>Dar-el-salaam</option>
+        </select>
+        <div class="invalid-feedback">
+          Please provide a valid District.
+        </div>
+      </div>
+      <div class="col-md-3 mb-3">
+        <label for="zip" class="white">Zip</label>
+        <input type="text" class="form-control" id="zip" placeholder="" required>
+        <div class="invalid-feedback">
+          Zip code required.
+        </div>
+      </div>
+    </div>
+<br>
    <div class="form-check">
       <input class="form-check-input" type="checkbox" value="" id="invalidCheck" required>
       <label class="form-check-label white" for="invalidCheck">
