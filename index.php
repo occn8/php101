@@ -184,7 +184,7 @@
         <div class="wh"><img src="images/hos.jpg" class="d-block w-100 rounded cad" alt=""></div>
         <div class="wh"><img src="images/pi.jpeg" class="d-block w-100 rounded cad" alt=""></div>
         <div class="wh"><img src="images/hos2.jpg" class="d-block w-100 rounded cad" alt=""></div>
-        <div class="wh"><img src="images/pi1.jpg" class="d-block w-100 rounded cad" alt=""> </div>
+        <div class="wh"><img src="images/pi.jpeg" class="d-block w-100 rounded cad" alt=""> </div>
         <div class="wh"><img src="images/hos.jpg" class="d-block w-100 rounded cad" alt=""></div>
         <div class="wh"><img src="images/pi.jpeg" class="d-block w-100 rounded cad" alt=""></div>
       </div>
@@ -200,7 +200,7 @@
       </div>
       <div class="slider demo">
         <div class="wh"><img src="images/ugair3.jpg" class="d-block w-100 rounded " alt=""> </div>
-        <div class="wh"><img src="images/airp.png" class="d-block w-100 rounded" alt=""></div>
+        <div class="wh"><img src="images/airp.jpg" class="d-block w-100 rounded" alt=""></div>
         <div class="wh"><img src="images/pi.jpeg" class="d-block w-100 rounded" alt=""></div>
         <div class="wh"><img src="images/hos.jpg" class="d-block w-100 rounded" alt=""></div>
         <div class="wh"><img src="images/pi.jpeg" class="d-block w-100 rounded" alt=""></div>
