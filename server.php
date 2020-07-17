@@ -10,7 +10,7 @@
 	// connect to database
 	$db = mysqli_connect('localhost', 'root', '', 'airline');
 
-	// REGISTER USER
+	// [REGISTER USER]
 	if (isset($_POST['reg_user'])) {
 		// receive all input values from the form
 		$username = mysqli_real_escape_string($db, $_POST['username']);
@@ -29,7 +29,7 @@
 
 		// register user if there are no errors in the form
 		if (count($errors) == 0) {
-			$password = md5($password_1);//encrypt the password before saving in the database
+			$password = md5($password_1);
 			$query = "INSERT INTO users (username, email, password) 
 					  VALUES('$username', '$email', '$password')";
 			mysqli_query($db, $query);
@@ -41,9 +41,7 @@
 
 	}
 
-	// ... 
-
-	// LOGIN USER
+	// [LOGIN USER]
 	if (isset($_POST['login_user'])) {
 		$username = mysqli_real_escape_string($db, $_POST['username']);
 		$password = mysqli_real_escape_string($db, $_POST['password']);

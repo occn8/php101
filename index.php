@@ -119,10 +119,10 @@
             <div class="container">
               <div class="carousel-cont">
                 <div class="carousel-caption text-left">
-                  <h1>Example headline.</h1>
-                  <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at
-                    eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
-                  <p><a class="btn btn-lg btn-primary" href="#" role="button">Sign up today</a></p>
+                  <h1>Uganda Airlines.</h1>
+                  <p>Uganda Airlines is Uganda’s flagship national passenger and cargo carrier. 
+                  We provide scheduled air transportation services in East Africa and near-international markets.</p>
+                  <p><a class="btn btn-lg btn-primary" href="#" role="button">Fly today</a></p>
                 </div>
               </div>
             </div>
@@ -135,9 +135,9 @@
             <div class="container">
               <div class="carousel-cont">
                 <div class="carousel-caption">
-                  <h1>Another example headline.</h1>
-                  <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at
-                    eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+                  <h1>We ar pearl of Africa Flight.</h1>
+                  <p>Uganda Airlines is Uganda’s flagship national passenger and cargo carrier. 
+                    We provide scheduled air transportation services in East Africa and near-international markets.</p>
                   <p><a class="btn btn-lg btn-primary" href="#" role="button">Learn more</a></p>
                 </div>
               </div>
@@ -152,9 +152,9 @@
             <div class="container">
               <div class="carousel-cont">
                 <div class="carousel-caption text-right">
-                  <h1>One more for good measure.</h1>
-                  <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at
-                    eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+                  <h1>Views of destinations we go.</h1>
+                  <p>Uganda Airlines is Uganda’s flagship national passenger and cargo carrier. 
+                    We provide scheduled air transportation services in East Africa and near-international markets.</p>
                   <p><a class="btn btn-lg btn-primary" href="#" role="button">Browse gallery</a></p>
                 </div>
               </div>
@@ -176,6 +176,9 @@
     <div class="container">
       <div>
         <h3>Our crew</h3>
+        <p>A world-class airline exceeding customer expectations, through high-quality service, global connectivity,
+         and commitment to excellence Uganda Airlines is Uganda’s flagship national passenger and cargo carrier. 
+         We provide scheduled air transportation services in East Africa and near-international markets.</p>
       </div>
       <div class="slider demo">
         <div class="wh"><img src="images/hos.jpg" class="d-block w-100 rounded cad" alt=""></div>
@@ -192,6 +195,8 @@
     <div class="container">
       <div>
         <h3>Our Airport</h3>
+      <p>Uganda Airlines is Uganda’s flagship national passenger and cargo carrier. We provide scheduled 
+      air transportation services in East Africa and near-international markets.</p>
       </div>
       <div class="slider demo">
         <div class="wh"><img src="images/ugair3.jpg" class="d-block w-100 rounded " alt=""> </div>
@@ -201,20 +206,25 @@
         <div class="wh"><img src="images/pi.jpeg" class="d-block w-100 rounded" alt=""></div>
         <div class="wh"><img src="images/hos2.jpg" class="d-block w-100 rounded" alt=""></div>
       </div>
+      <p>With the upcoming arrival and addition of new planes to our fleet, we will expand our route map
+       and fly to DRC, Zanzibar, Asmara, Hargeisa, Lusaka, Harare, Johannesburg, Djibouti, 
+       and Addis Ababa, and plan to make international flights connecting Uganda to Europe,
+        the Middle East, West Africa and Asia.</p>
+      <br>
     </div>
 </section>
     <section class="home-newsletter">
       <div class="container">
         <div class="row">
           <div class="col-sm-12">
-            <div class="single">
+            <div class="single"><br>
               <h2>Subscribe to our Newsletter</h2>
               <div class="input-group">
                 <input type="email" class="form-control" placeholder="Enter your email">
                 <span class="input-group-btn">
-                  <button class="btn btn-theme" type="submit">Subscribe</button>
+                  <button class="btn or" type="submit">Subscribe</button>
                 </span>
-              </div>
+              </div><br>
             </div>
           </div>
         </div>

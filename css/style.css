@@ -623,3 +623,11 @@ h4 {
 .white{
   color: white;
 }
+.or{
+  color:yellow !important;
+}
+.btn-primary{
+  color:black !important;
+  background-color:yellow !important;
+  border:none;
+}
