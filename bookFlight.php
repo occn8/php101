@@ -47,7 +47,7 @@
             <input id="multi" name="trip" type="radio" value="Multi" class="custom-control-input" required>
             <label class="custom-control-label white" for="multi">Multi Directional</label>
           </div>
-        </div>
+        </div><br>
 
         <div class="form-row">
           <div class="col-md-4 mb-3">
@@ -132,8 +132,8 @@
           </div>
         </div>
 
-        <div class="input-group">
-          <button type="submit" class="btn btn-warning" name="flight_search">Search Flight</button>
+        <div class="input-group serh">
+          <p>Search Flight</p>
         </div>
         <br><br>
         <hr class="mb-4">
@@ -200,8 +200,8 @@
           </div>
         </div>
         <hr class="mb-4">
-        <button class="btn btn-primary btn-lg btn-block" name="book_flight" type="submit">Continue to
-          checkout</button><br>
+        <button class="btn btn-primary btn-lg btn-block" name="book_flight" type="submit">
+        Continue to checkout</button><br>
       </form>
     </div>
 
