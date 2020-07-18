@@ -1,9 +1,4 @@
 <?php include('server.php') ?>
-<?php
-$cookie_name = "user";
-$cookie_value = "John Doe";
-setcookie($cookie_name, $cookie_value, time() + (86400 * 30), "/"); // 86400 = 1 day
-?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -34,7 +29,7 @@ setcookie($cookie_name, $cookie_value, time() + (86400 * 30), "/"); // 86400 = 1
   
 <div class="form-container">
   <center>
-    <form class="form-signin" form method="post" action="logIn.php">
+    <form class="form-signin" method="post" action="logIn.php">
     <?php include('errors.php'); ?>
         <div class="text-center mb-4">
             <img class="mb-4" src="images/logo.png" alt="" width="72" height="72">

@@ -28,7 +28,23 @@
 		zip VARCHAR(10),
 		password VARCHAR(50)
 		)";
-   		mysqli_query($db, $sql);
+		   mysqli_query($db, $sql);
+	 $sql2 = "CREATE TABLE bookings (
+		id INT(6) UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+		trip VARCHAR(20) NOT NULL,
+		dport VARCHAR(30) NOT NULL,
+		aport VARCHAR(30) NOT NULL,
+		adults VARCHAR(5),
+		children VARCHAR(5),
+		infants VARCHAR(5),
+		class VARCHAR(20) NOT NULL,
+		paymentMethod VARCHAR(20),
+		ccname VARCHAR(30),
+		ccnum VARCHAR(30),
+		ccexp VARCHAR(30),
+		cvv VARCHAR(10)
+		)";
+	   mysqli_query($db, $sql2);
 
 	// [REGISTER USER]
 	if (isset($_POST['register_user'])) {
@@ -88,12 +104,54 @@
 			if (mysqli_num_rows($results) == 1) {
 				$_SESSION['username'] = $username;
 				$_SESSION['success'] = "You are logged in";
-				setcookie('user', $username, time() + (86400 * 30), "/");
+				setcookie('user', $username, time() + (86400 * 2), "/");
 				header('location: index.php');
 			}else {
 				array_push($errors, "Wrong username, Password combination");
 			}
 		}
+	}
+
+	// [BOOKINGS]
+	if (isset($_POST['book_flight'])) {
+		$trip = mysqli_real_escape_string($db, $_POST['trip']);
+		$dport = mysqli_real_escape_string($db, $_POST['dport']);
+		$aport = mysqli_real_escape_string($db, $_POST['aport']);
+		$adults = mysqli_real_escape_string($db, $_POST['adults']);
+		$children = mysqli_real_escape_string($db, $_POST['children']);
+		$infants = mysqli_real_escape_string($db, $_POST['infants']);
+		$class = mysqli_real_escape_string($db, $_POST['class']);
+		$paymentMethod = mysqli_real_escape_string($db, $_POST['paymentMethod']);
+		$ccname = mysqli_real_escape_string($db, $_POST['ccname']);
+		$ccnum = mysqli_real_escape_string($db, $_POST['ccnum']);
+		$ccexp = mysqli_real_escape_string($db, $_POST['ccexp']);
+		$cvv = mysqli_real_escape_string($db, $_POST['cvv']);
+
+
+		if (empty($trip)) { array_push($errors, "Trip is required"); }
+		if (empty($dport)) { array_push($errors, "Departure port is required"); }
+		if (empty($aport)) { array_push($errors, "Arrival port is required"); }
+		if (empty($adults)) { array_push($errors, "Adult number is required"); }
+		// if (empty($children)) { array_push($errors, "children number is required"); }
+		// if (empty($infants)) { array_push($errors, "Infant number is required"); }
+		if (empty($class)) { array_push($errors, "Travel class is required"); }
+		if (empty($paymentMethod)) { array_push($errors, "PaymentMethod is required"); }
+		if (empty($ccname)) { array_push($errors, "CC name is required"); }
+		if (empty($ccnum)) { array_push($errors, "CC number is required"); }
+		if (empty($ccexp)) { array_push($errors, "Expiration date is required"); }
+		if (empty($cvv)) { array_push($errors, "CCV is required"); }
+
+
+		if (count($errors) == 0) {
+			$query = "INSERT INTO bookings (trip, dport, aport, adults, children, infants, class, paymentMethod, ccname, ccnum, ccexp, cvv) 
+					  VALUES('$trip','$dport', '$aport', '$adults', '$children', '$infants', '$class', '$paymentMethod', '$ccname', '$ccnum', '$ccexp', '$cvv')";
+			mysqli_query($db, $query);
+
+			$_SESSION['username'] = $username;
+			$_SESSION['success'] = "Booked successfuly";
+			header('location: index.php');
+		}
+
 	}
 
 ?>

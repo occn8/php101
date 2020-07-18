@@ -63,7 +63,7 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav ml-auto">
             <li class="nav-item active"><a class="nav-link" href="">Home</a></li>
-            <li class="nav-item"><a class="nav-link" href="pages/bookFlight.html">Book flight</a></li>
+            <li class="nav-item"><a class="nav-link" href="bookFlight.php">Book flight</a></li>
             <li class="nav-item"><a class="nav-link" href="pages/destinations.html">Destinations</a></li>
 
             <li class="nav-item dropdown">
@@ -97,7 +97,7 @@
           <h3 class="title"> Fly the Crane to the Pearl of Africa
           </h3>
           <h4 class="sub-title"> Travel further.</h4>
-          <button type="submit" class="btn btn-submit"><a id="sub" href="pages/bookFlight.html">Book Flight</a></button>
+          <a id="sub" href="bookFlight.php"><button type="submit" class="btn btn-submit">Book Flight</button></a>
         </div>
       </div>
 

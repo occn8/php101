@@ -133,8 +133,8 @@
       </div>
     </div>
     <div class="form-group">
-    <label for="exampleFormControlFile1" class="white">Choose Profile Image</label>
-    <input type="file" class="form-control-file white" id="exampleFormControlFile1">
+    <label for="file1" class="white">Choose Profile Image</label>
+    <input type="file" class="form-control-file white" id="file1">
   </div>
 <br>
    <div class="form-check">
