@@ -1,22 +1,22 @@
 
-# __PHP Project__
+# __UID Project__
 ___
-<!-- ## [Travel Website](https://occn8.github.io/mu-uid/) -->
 
-![logo](./favicon.ico)
-***
-responsive travel website
+## [Uganda Airlines Website](https://occn8.github.io/ua-uid/) 
 
-<!-- ## Check out [website](https://occn8.github.io/mu-uid/) -->
-### Created By
+<img src="./favicon.ico" width="250px" />
+___
 
+### responsive travel website
+
+## Check out [website](https://occn8.github.io/ua-uid/)
+
+### Designed By
   [ochenhillary](https://github.com/occn8)
   > [mysite](https://...mysite..)
 
 
 ## About
-
 > Based off the pearl application.
-> bla blaa blaah...
 
 ## Screenshots

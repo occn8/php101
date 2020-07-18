@@ -28,7 +28,7 @@
 
 <div class="form-container">
   <center>
-  <form method="post" action="register.php" class="needs-validation form-register">
+  <form method="post" action="register.php" class="needs-validation form-register" novalidate>
    
    <?php include('errors.php'); ?>
    <div class="text-center mb-4">
@@ -45,14 +45,14 @@
    <div class="row">
         <div class="col-md-6 mb-3">
           <label class="white" for="firstName">First name</label>
-          <input type="text" class="form-control" id="firstName" value="" required>
+          <input type="text" name="fname" class="form-control" id="firstName" value="" required>
           <div class="invalid-feedback">
             Valid first name is required.
           </div>
         </div>
         <div class="col-md-6 mb-3">
           <label class="white" for="lastName">Last name</label>
-          <input type="text" class="form-control" id="lastName" value="" required>
+          <input type="text" name="lname" class="form-control" id="lastName" value="" required>
           <div class="invalid-feedback">
             Valid last name is required.
           </div>
@@ -61,46 +61,46 @@
 
    <div class="form-group">
      <label class="white">Username</label>
-     <input type="text" name="username" value="<?php echo $username; ?>" class="form-control">
+     <input type="text" name="username" value="<?php echo $username; ?>" class="form-control" required>
      <div class="invalid-feedback">
-            Valid last name is required.
+            Valid user name is required.
     </div>
    </div>
    <div class="form-group">
      <label class="white">Email</label>
-     <input type="email" name="email" value="<?php echo $email; ?>" class="form-control">
+     <input type="email" name="email" value="<?php echo $email; ?>" class="form-control" required>
      <div class="invalid-feedback">
-            Valid last name is required.
+            Valid last Email is required.
     </div>
    </div>
 
    <div class="form-row">
    <div class="form-group col-md-6">
      <label class="white">Password</label>
-     <input type="password" name="password_1" class="form-control">
+     <input type="password" name="password_1" class="form-control" required>
+     <div class="invalid-feedback">
+         Please enter valid Password.
+      </div>
    </div>
    <div class="form-group col-md-6">
      <label class="white">Confirm password</label>
-     <input type="password" name="password_2" class="form-control">
+     <input type="password" name="password_2" class="form-control" required>
+     <div class="invalid-feedback">
+         Please enter valid Password.
+      </div>
    </div>
    </div>
    <div class="mb-3">
        <label for="address" class="white">Address</label>
-       <input type="text" class="form-control" id="address" placeholder="12 Main St" required>
+       <input type="text" name="address" class="form-control" id="address" placeholder="12 Main St" required>
        <div class="invalid-feedback">
          Please enter your Home address.
        </div>
     </div>
-
-    <div class="mb-3">
-       <label for="address2" class="white">Address 2 <span class="text-muted">(Optional)</span></label>
-       <input type="text" class="form-control" id="address2" placeholder="Apartment or suite">
-   </div>
-
    <div class="row">
       <div class="col-md-5 mb-3">
         <label for="country" class="white">Country</label>
-        <select class="custom-select d-block w-100" id="country" required>
+        <select class="custom-select d-block w-100" name="country" id="country" required>
           <option value="">Choose..</option>
           <option>Uganda</option>
           <option>Kenya</option>
@@ -113,7 +113,7 @@
       </div>
       <div class="col-md-4 mb-3">
         <label for="state" class="white">District | State</label>
-        <select class="custom-select d-block w-100" id="state" required>
+        <select class="custom-select d-block w-100" name="district" id="state" required>
           <option value="">Choose..</option>
           <option>Entebbe</option>
           <option>Kampala</option>
@@ -126,15 +126,19 @@
       </div>
       <div class="col-md-3 mb-3">
         <label for="zip" class="white">Zip</label>
-        <input type="text" class="form-control" id="zip" placeholder="" required>
+        <input type="text" class="form-control" id="zip" name="zip" placeholder="" required>
         <div class="invalid-feedback">
           Zip code required.
         </div>
       </div>
     </div>
+    <div class="form-group">
+    <label for="exampleFormControlFile1" class="white">Choose Profile Image</label>
+    <input type="file" class="form-control-file white" id="exampleFormControlFile1">
+  </div>
 <br>
    <div class="form-check">
-      <input class="form-check-input" type="checkbox" value="" id="invalidCheck" required>
+      <input class="form-check-input" type="checkbox" name="agree" value="" id="invalidCheck" required>
       <label class="form-check-label white" for="invalidCheck">
         Agree to terms and conditions
       </label>
@@ -144,7 +148,7 @@
     </div><br>
 
    <div class="input-group">
-     <button type="submit" class="btn btn-warning" name="reg_user">Register</button>
+     <button type="submit" class="btn btn-warning" name="register_user">Register</button>
    </div>
    <br>
    <p>
@@ -153,122 +157,12 @@
  </form>
 </center>
  </div>
- <!-- <form class="needs-validation form-register" novalidate>
-          <div class="row">
-            <div class="col-md-6 mb-3">
-              <label for="firstName">First name</label>
-              <input type="text" class="form-control" id="firstName" placeholder="" value="" required>
-              <div class="invalid-feedback">
-                Valid first name is required.
-              </div>
-            </div>
-            <div class="col-md-6 mb-3">
-              <label for="lastName">Last name</label>
-              <input type="text" class="form-control" id="lastName" placeholder="" value="" required>
-              <div class="invalid-feedback">
-                Valid last name is required.
-              </div>
-            </div>
-          </div>
-
-          <div class="mb-3">
-            <label for="username">Username</label>
-            <div class="input-group">
-              <div class="input-group-prepend">
-                <span class="input-group-text">@</span>
-              </div>
-              <input type="text" class="form-control" id="username" required>
-              <div class="invalid-feedback" style="width: 100%;">
-                Your username is required.
-              </div>
-            </div>
-          </div>
-
-          <div class="mb-3">
-            <label for="email">Email <span class="text-muted">(Optional)</span></label>
-            <input type="email" class="form-control" id="email"  placeholder="you@example.com">
-            <div class="invalid-feedback">
-              Please enter a valid email address for shipping updates.
-            </div>
-          </div>
-
-          <div class="form-row">
-          <div class="form-group col-md-6">
-            <label for="inputPassword4">Password</label>
-            <input type="password" class="form-control" name="password_1" id="inputPassword4">
-          </div>
-          <div class="form-group col-md-6">
-            <label for="inputPassword4">Password Confirm</label>
-            <input type="password" class="form-control" name="password_2" id="inputPassword4">
-          </div>
-           </div>
-           
-          <div class="mb-3">
-            <label for="address">Address</label>
-            <input type="text" class="form-control" id="address" placeholder="1234 Main St" required>
-            <div class="invalid-feedback">
-              Please enter your shipping address.
-            </div>
-          </div>
-
-          <div class="mb-3">
-            <label for="address2">Address 2 <span class="text-muted">(Optional)</span></label>
-            <input type="text" class="form-control" id="address2" placeholder="Apartment or suite">
-          </div>
-
-          <div class="row">
-            <div class="col-md-5 mb-3">
-              <label for="country">Country</label>
-              <select class="custom-select d-block w-100" id="country" required>
-                <option value="">Choose...</option>
-                <option>United States</option>
-              </select>
-              <div class="invalid-feedback">
-                Please select a valid country.
-              </div>
-            </div>
-            <div class="col-md-4 mb-3">
-              <label for="state">State</label>
-              <select class="custom-select d-block w-100" id="state" required>
-                <option value="">Choose...</option>
-                <option>California</option>
-              </select>
-              <div class="invalid-feedback">
-                Please provide a valid state.
-              </div>
-            </div>
-            <div class="col-md-3 mb-3">
-              <label for="zip">Zip</label>
-              <input type="text" class="form-control" id="zip" placeholder="" required>
-              <div class="invalid-feedback">
-                Zip code required.
-              </div>
-            </div>
-          </div>
-          <hr class="mb-4">
-          <div class="form-group">
-    <div class="form-check">
-      <input class="form-check-input" type="checkbox" value="" id="invalidCheck" required>
-      <label class="form-check-label" for="invalidCheck">
-        Agree to terms and conditions
-      </label>
-      <div class="invalid-feedback">
-        You must agree before submitting.
-      </div>
-    </div>
-  </div>
-          <button class="btn btn-primary btn-md" name="reg_user" type="submit">Register</button>
-        </form> -->
-  
 
   <script>
-// Example starter JavaScript for disabling form submissions if there are invalid fields
 (function() {
   'use strict';
   window.addEventListener('load', function() {
-    // Fetch all the forms we want to apply custom Bootstrap validation styles to
     var forms = document.getElementsByClassName('needs-validation');
-    // Loop over them and prevent submission
     var validation = Array.prototype.filter.call(forms, function(form) {
       form.addEventListener('submit', function(event) {
         if (form.checkValidity() === false) {
@@ -281,6 +175,7 @@
   }, false);
 })();
 </script>
+
   <script src="js/jquery.min.js"></script>
   <script src="js/jquery.easing.min.js"></script>
   <script src="js/bootstrap.min.js"></script>

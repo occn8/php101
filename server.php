@@ -1,24 +1,51 @@
 <?php 
 	session_start();
 
-	// variable declaration
 	$username = "";
 	$email    = "";
 	$errors = array(); 
 	$_SESSION['success'] = "";
 
-	// connect to database
-	$db = mysqli_connect('localhost', 'root', '', 'airline');
+	$servername = "localhost";
+	$user = "root";
+	$password = "";
+	$dbase = "airline";
+	
+	$db = mysqli_connect($servername, $user, $password, $dbase);
+	// if ($db->connect_error) {
+	// 	die("Connection failed: " . $db->connect_error);
+	// }
+
+	$sql = "CREATE TABLE users (
+		id INT(6) UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+		fname VARCHAR(30) NOT NULL,
+		lname VARCHAR(30) NOT NULL,
+		username VARCHAR(30) NOT NULL,
+		email VARCHAR(50),
+		address VARCHAR(20) NOT NULL,
+		country VARCHAR(20),
+		district VARCHAR(20),
+		zip VARCHAR(10),
+		password VARCHAR(50)
+		)";
+   		mysqli_query($db, $sql);
 
 	// [REGISTER USER]
-	if (isset($_POST['reg_user'])) {
-		// receive all input values from the form
+	if (isset($_POST['register_user'])) {
+		$fname = mysqli_real_escape_string($db, $_POST['fname']);
+		$lname = mysqli_real_escape_string($db, $_POST['lname']);
 		$username = mysqli_real_escape_string($db, $_POST['username']);
 		$email = mysqli_real_escape_string($db, $_POST['email']);
+		$address = mysqli_real_escape_string($db, $_POST['address']);
+		$country = mysqli_real_escape_string($db, $_POST['country']);
+		$district = mysqli_real_escape_string($db, $_POST['district']);
+		$zip = mysqli_real_escape_string($db, $_POST['zip']);
 		$password_1 = mysqli_real_escape_string($db, $_POST['password_1']);
 		$password_2 = mysqli_real_escape_string($db, $_POST['password_2']);
 
-		// form validation: ensure that the form is correctly filled
+
+		if (empty($fname)) { array_push($errors, "First name is required"); }
+		if (empty($lname)) { array_push($errors, "Last name is required"); }
 		if (empty($username)) { array_push($errors, "Username is required"); }
 		if (empty($email)) { array_push($errors, "Email is required"); }
 		if (empty($password_1)) { array_push($errors, "Password is required"); }
@@ -27,11 +54,11 @@
 			array_push($errors, "Passwords do not match");
 		}
 
-		// register user if there are no errors in the form
+		// [register]
 		if (count($errors) == 0) {
 			$password = md5($password_1);
-			$query = "INSERT INTO users (username, email, password) 
-					  VALUES('$username', '$email', '$password')";
+			$query = "INSERT INTO users (fname, lname, username, email, address, country, district, zip, password) 
+					  VALUES('$fname','$lname', '$username', '$email', '$address', '$country', '$district', '$zip', '$password')";
 			mysqli_query($db, $query);
 
 			$_SESSION['username'] = $username;
@@ -61,6 +88,7 @@
 			if (mysqli_num_rows($results) == 1) {
 				$_SESSION['username'] = $username;
 				$_SESSION['success'] = "You are logged in";
+				setcookie('user', $username, time() + (86400 * 30), "/");
 				header('location: index.php');
 			}else {
 				array_push($errors, "Wrong username, Password combination");

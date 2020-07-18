@@ -26,58 +26,178 @@
     <span></span>
   </div>
   <main class="about">
-    <div class="container">
+    <div class="container pad">
       <center>
-        <h1><b>Book Your flight Here</b></h1>
+        <h1><b>Book Your flight Here</b></h1><br>
       </center>
-      <h4 class="mb-3">Payment</h4>
+      <form class="needs-validation" novalidate>
+        <div class="form-row">
+          <div class="custom-control custom-radio col-md-4 mb-3">
+            <input id="one" name="trip" type="radio" class="custom-control-input" checked required>
+            <label class="custom-control-label white" for="one">One Way</label>
+          </div>
+          <div class="custom-control custom-radio col-md-4 mb-3">
+            <input id="round" name="trip" type="radio" class="custom-control-input" required>
+            <label class="custom-control-label white" for="round">Round Trip</label>
+          </div>
+          <div class="custom-control custom-radio col-md-4 mb-3">
+            <input id="multi" name="trip" type="radio" class="custom-control-input" required>
+            <label class="custom-control-label white" for="multi">Multi Directional</label>
+          </div>
+        </div>
 
-      <div class="d-block my-3">
-        <div class="custom-control custom-radio">
-          <input id="credit" name="paymentMethod" type="radio" class="custom-control-input" checked required>
-          <label class="custom-control-label white" for="credit">Credit card</label>
-        </div>
-        <div class="custom-control custom-radio">
-          <input id="debit" name="paymentMethod" type="radio" class="custom-control-input" required>
-          <label class="custom-control-label white" for="debit">Debit card</label>
-        </div>
-      </div>
-      <div class="row">
-        <div class="col-md-6 mb-3">
-          <label for="cc-name" class="white">Name on card</label>
-          <input type="text" class="form-control" id="cc-name" placeholder="" required>
-          <small class="text-muted">Full name as displayed on card</small>
-          <div class="invalid-feedback">
-            Name on card is required
+        <div class="form-row">
+          <div class="col-md-4 mb-3">
+            <label for="departure" class="white">Departure Port</label>
+            <select class="custom-select d-block w-100" id="departure" required>
+              <option value="">Choose..</option>
+              <option>Entebbe</option>
+              <option>Kampala</option>
+              <option>Nairobi</option>
+              <option>Dar-el-salaam</option>
+            </select>
+            <div class="invalid-feedback">
+              Please provide a valid Port.
+            </div>
+          </div>
+          <div class="col-md-4 mb-3">
+            <label for="arrival" class="white">Arrival Port</label>
+            <select class="custom-select d-block w-100" id="arrival" required>
+              <option value="">Choose..</option>
+              <option>Entebbe</option>
+              <option>Kampala</option>
+              <option>Nairobi</option>
+              <option>Dar-el-salaam</option>
+            </select>
+            <div class="invalid-feedback">
+              Please provide a valid Port.
+            </div>
           </div>
         </div>
-        <div class="col-md-6 mb-3">
-          <label for="cc-number" class="white">Credit card number</label>
-          <input type="text" class="form-control" id="cc-number" placeholder="" required>
-          <div class="invalid-feedback">
-            Credit card number is required
-          </div>
-        </div>
-      </div>
-      <div class="row">
-        <div class="col-md-3 mb-3">
-          <label for="cc-expiration" class="white">Expiration</label>
-          <input type="text" class="form-control" id="cc-expiration" placeholder="" required>
-          <div class="invalid-feedback">
-            Expiration date required
-          </div>
-        </div>
-        <div class="col-md-3 mb-3">
-          <label for="cc-cvv" class="white">CVV</label>
-          <input type="text" class="form-control" id="cc-cvv" placeholder="" required>
-          <div class="invalid-feedback">
-            Security code required
-          </div>
-        </div>
-      </div>
-      <hr class="mb-4">
-      <button class="btn btn-primary btn-lg btn-block" type="submit">Continue to checkout</button><br>
 
+        <h2>Number of Travelers</h2>
+        <div class="form-row">
+          <div class="col-md-4 mb-3">
+            <label for="adults" class="white">Adults <span class="text-muted">(12+ Years)</span></label>
+            <select class="custom-select d-block w-100" id="adults" required>
+              <option value="">Choose..</option>
+              <option>1</option>
+              <option>2</option>
+              <option>3</option>
+              <option>4</option>
+            </select>
+            <div class="invalid-feedback">
+              Please provide a valid Number.
+            </div>
+          </div>
+          <div class="col-md-4 mb-3">
+            <label for="children" class="white">Children <span class="text-muted">(3-11 Years)</span></label>
+            <select class="custom-select d-block w-100" id="children" required>
+              <option value="">Choose..</option>
+              <option>1</option>
+              <option>2</option>
+              <option>3</option>
+              <option>4</option>
+            </select>
+            <div class="invalid-feedback">
+              Please provide a valid Number.
+            </div>
+          </div>
+          <div class="col-md-4 mb-3">
+            <label for="infants" class="white">Infants <span class="text-muted">(0-2 Years)</span></label>
+            <select class="custom-select d-block w-100" id="infants" required>
+              <option value="">Choose..</option>
+              <option>1</option>
+              <option>2</option>
+            </select>
+            <div class="invalid-feedback">
+              Please provide a valid Number.
+            </div>
+          </div>
+        </div>
+
+        <h2>Class of travel</h2>
+        <div class="form-row">
+          <div class="custom-control custom-checkbox col-md-4 mb-3">
+            <input id="one" name="class" type="radio" class="custom-control-input" required>
+            <label class="custom-control-label white" for="one">One Way</label>
+          </div>
+          <div class="custom-control custom-checkbox col-md-4 mb-3">
+            <input id="economy" name="class" type="radio" class="custom-control-input" checked required>
+            <label class="custom-control-label white" for="economy">Economy</label>
+          </div>
+          <div class="custom-control custom-checkbox col-md-4 mb-3">
+            <input id="first" name="class" type="radio" class="custom-control-input" required>
+            <label class="custom-control-label white" for="first">First Class</label>
+          </div>
+        </div>
+
+        <div class="input-group">
+          <button type="submit" class="btn btn-warning" name="reg_user">Search Flight</button>
+        </div>
+        <br><br>
+        <hr class="mb-4">
+
+        <h2 class="mb-3"><b>Payment</b></h2>
+
+        <div class="d-block my-3">
+          <div class="custom-control custom-radio">
+            <input id="credit" name="paymentMethod" type="radio" class="custom-control-input" checked required>
+            <label class="custom-control-label white" for="credit">Credit card</label>
+          </div>
+          <div class="custom-control custom-radio">
+            <input id="debit" name="paymentMethod" type="radio" class="custom-control-input" required>
+            <label class="custom-control-label white" for="debit">Debit card</label>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-6 mb-3">
+            <label for="cc-name" class="white">Name on card</label>
+            <input type="text" class="form-control" id="cc-name" placeholder="" required>
+            <small class="text-muted">Full name as displayed on card</small>
+            <div class="invalid-feedback">
+              Name on card is required
+            </div>
+          </div>
+          <div class="col-md-6 mb-3">
+            <label for="cc-number" class="white">Credit card number</label>
+            <input type="text" class="form-control" id="cc-number" placeholder="" required>
+            <div class="invalid-feedback">
+              Credit card number is required
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-3 mb-3">
+            <label for="cc-expiration" class="white">Expiration</label>
+            <input type="text" class="form-control" id="cc-expiration" placeholder="" required>
+            <div class="invalid-feedback">
+              Expiration date required
+            </div>
+          </div>
+          <div class="col-md-3 mb-3">
+            <label for="cc-cvv" class="white">CVV</label>
+            <input type="text" class="form-control" id="cc-cvv" placeholder="" required>
+            <div class="invalid-feedback">
+              Security code required
+            </div>
+          </div>
+        </div><br>
+
+        <div class="form-group">
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" value="" id="invalidCheck" required>
+            <label class="form-check-label white" for="invalidCheck">
+              Agree to terms and conditions
+            </label>
+            <div class="invalid-feedback">
+              You must agree before submitting.
+            </div>
+          </div>
+        </div>
+        <hr class="mb-4">
+        <button class="btn btn-primary btn-lg btn-block" type="submit">Continue to checkout</button><br>
+      </form>
     </div>
 
     <footer id="o-footer" class="abst" role="contentinfo">
@@ -170,6 +290,24 @@
     </a>
 
   </main>
+
+  <script>
+    (function() {
+      'use strict';
+      window.addEventListener('load', function() {
+        var forms = document.getElementsByClassName('needs-validation');
+        var validation = Array.prototype.filter.call(forms, function(form) {
+          form.addEventListener('submit', function(event) {
+            if (form.checkValidity() === false) {
+              event.preventDefault();
+              event.stopPropagation();
+            }
+            form.classList.add('was-validated');
+          }, false);
+        });
+      }, false);
+    })();
+    </script>
 
   <script src="../js/jquery.min.js"></script>
   <script src="../js/jquery.easing.min.js"></script>
