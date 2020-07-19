@@ -9,14 +9,24 @@
 	$servername = "localhost";
 	$user = "root";
 	$password = "";
-	$dbase = "airline";
+	// $dbase = "airline";
 	
-	$db = mysqli_connect($servername, $user, $password, $dbase);
+	$db = mysqli_connect($servername, $user, $password);
 	// if ($db->connect_error) {
 	// 	die("Connection failed: " . $db->connect_error);
 	// }
 
-	$sql = "CREATE TABLE users (
+	$base = "CREATE DATABASE IF NOT EXISTS travelDB";
+		if (mysqli_query($db, $base)) {
+		    echo "Db check";
+		} else {
+		    echo "Error creating database: " . mysqli_error($db);
+		}
+
+	$use = "USE travelDB";
+		mysqli_query($db, $use);
+
+	$sql = "CREATE TABLE IF NOT EXISTS users (
 		id INT(6) UNSIGNED AUTO_INCREMENT PRIMARY KEY,
 		fname VARCHAR(30) NOT NULL,
 		lname VARCHAR(30) NOT NULL,
@@ -28,9 +38,10 @@
 		zip VARCHAR(10),
 		password VARCHAR(50)
 		)";
-		   mysqli_query($db, $sql);
-	 $sql2 = "CREATE TABLE bookings (
-		id INT(6) UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+		mysqli_query($db, $sql);
+
+	 $sql2 = "CREATE TABLE IF NOT EXISTS bookings (
+		travelId INT(6) UNSIGNED AUTO_INCREMENT PRIMARY KEY,
 		trip VARCHAR(20) NOT NULL,
 		dport VARCHAR(30) NOT NULL,
 		aport VARCHAR(30) NOT NULL,
@@ -44,7 +55,7 @@
 		ccexp VARCHAR(30),
 		cvv VARCHAR(10)
 		)";
-	   mysqli_query($db, $sql2);
+		mysqli_query($db, $sql2);
 
 	// [REGISTER USER]
 	if (isset($_POST['register_user'])) {
@@ -79,6 +90,7 @@
 
 			$_SESSION['username'] = $username;
 			$_SESSION['success'] = "You are logged in";
+			setcookie('user', $username, time() + (86400 * 2), "/");
 			header('location: index.php');
 		}
 
@@ -140,7 +152,9 @@
 		if (empty($ccnum)) { array_push($errors, "CC number is required"); }
 		if (empty($ccexp)) { array_push($errors, "Expiration date is required"); }
 		if (empty($cvv)) { array_push($errors, "CCV is required"); }
-
+		if ($dport == $aport) {
+			array_push($errors, "Departure matches Arrival Port");
+		}
 
 		if (count($errors) == 0) {
 			$query = "INSERT INTO bookings (trip, dport, aport, adults, children, infants, class, paymentMethod, ccname, ccnum, ccexp, cvv) 
