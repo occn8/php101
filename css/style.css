@@ -632,6 +632,14 @@ h4 {
 .white{
   color: white;
 }
+.f-left{
+  text-align: left; 
+  float: left;
+}
+.f-center{
+  text-align: center; 
+  float: center;
+}
 .or{
   color:yellow !important;
 }

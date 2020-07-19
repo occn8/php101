@@ -44,12 +44,12 @@
 
         <div class="form-label-group">
             <input type="text" name="username" id="inputName" class="form-control" placeholder="Username" required autofocus>
-            <label for="inputName">Username</label>
+            <label for="inputName" style="text-align: left; float: left;">Username</label>
         </div>
 
         <div class="form-label-group">
             <input type="password" name="password" id="inputPassword" class="form-control" placeholder="Password" required>
-            <label for="inputPassword">Password</label>
+            <label for="inputPassword" style="text-align: left; float: left;">Password</label>
         </div>
 
         <div class="checkbox mb-3">
@@ -60,7 +60,7 @@
         <button class="btn btn-lg btn-warning btn-block" type="submit" name="login_user">Sign in</button>
         <br>
         <p>
-			<small>Not yet a member?</small> <a href="register.php">Sign up</a>
+			<small>Not yet a member?</small> <a href="register.php" style="color:yellow;">Sign up</a>
 		</p>
 
         <p class="mt-5 mb-3 text-muted text-center">&copy; 2017-2020</p>

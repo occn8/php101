@@ -44,14 +44,14 @@
 
    <div class="row">
         <div class="col-md-6 mb-3">
-          <label class="white" for="firstName">First name</label>
+          <label class="white f-left" for="firstName">First name</label>
           <input type="text" name="fname" class="form-control" id="firstName" value="" required>
           <div class="invalid-feedback">
             Valid first name is required.
           </div>
         </div>
         <div class="col-md-6 mb-3">
-          <label class="white" for="lastName">Last name</label>
+          <label class="white f-left" for="lastName">Last name</label>
           <input type="text" name="lname" class="form-control" id="lastName" value="" required>
           <div class="invalid-feedback">
             Valid last name is required.
@@ -60,14 +60,14 @@
     </div>
 
    <div class="form-group">
-     <label class="white">Username</label>
+     <label class="white f-left">Username</label>
      <input type="text" name="username" value="<?php echo $username; ?>" class="form-control" required>
      <div class="invalid-feedback">
             Valid user name is required.
     </div>
    </div>
    <div class="form-group">
-     <label class="white">Email</label>
+     <label class="white f-left">Email</label>
      <input type="email" name="email" value="<?php echo $email; ?>" class="form-control" required>
      <div class="invalid-feedback">
             Valid last Email is required.
@@ -76,14 +76,14 @@
 
    <div class="form-row">
    <div class="form-group col-md-6">
-     <label class="white">Password</label>
+     <label class="white f-left">Password</label>
      <input type="password" name="password_1" class="form-control" required>
      <div class="invalid-feedback">
          Please enter valid Password.
       </div>
    </div>
    <div class="form-group col-md-6">
-     <label class="white">Confirm password</label>
+     <label class="white f-left">Confirm password</label>
      <input type="password" name="password_2" class="form-control" required>
      <div class="invalid-feedback">
          Please enter valid Password.
@@ -91,7 +91,7 @@
    </div>
    </div>
    <div class="mb-3">
-       <label for="address" class="white">Address</label>
+       <label for="address" class="white f-left">Address</label>
        <input type="text" name="address" class="form-control" id="address" placeholder="12 Main St" required>
        <div class="invalid-feedback">
          Please enter your Home address.
@@ -99,7 +99,7 @@
     </div>
    <div class="row">
       <div class="col-md-5 mb-3">
-        <label for="country" class="white">Country</label>
+        <label for="country" class="white f-left">Country</label>
         <select class="custom-select d-block w-100" name="country" id="country" required>
           <option value="">Choose..</option>
           <option>Uganda</option>
@@ -112,7 +112,7 @@
         </div>
       </div>
       <div class="col-md-4 mb-3">
-        <label for="state" class="white">District | State</label>
+        <label for="state" class="white f-left">District | State</label>
         <select class="custom-select d-block w-100" name="district" id="state" required>
           <option value="">Choose..</option>
           <option>Entebbe</option>
@@ -125,7 +125,7 @@
         </div>
       </div>
       <div class="col-md-3 mb-3">
-        <label for="zip" class="white">Zip</label>
+        <label for="zip" class="white f-left">Zip</label>
         <input type="text" class="form-control" id="zip" name="zip" placeholder="" required>
         <div class="invalid-feedback">
           Zip code required.
@@ -133,7 +133,7 @@
       </div>
     </div>
     <div class="form-group">
-    <label for="file1" class="white">Choose Profile Image</label>
+    <label for="file1" class="white f-left">Choose Profile Image</label>
     <input type="file" class="form-control-file white" id="file1">
   </div>
 <br>
@@ -146,13 +146,12 @@
         You must agree before submitting.
       </div>
     </div><br>
-
-   <div class="input-group">
-     <button type="submit" class="btn btn-warning" name="register_user">Register</button>
+   <div class="form-group ">
+     <button type="submit" class="btn btn-warning col-md-4" name="register_user">Register</button>
    </div>
    <br>
    <p>
-     <small>Already a member?</small> <a href="logIn.php">Sign in</a>
+     <small>Already a member?</small> <a href="logIn.php" style="color:yellow;">Sign in</a>
    </p>
  </form>
 </center>
