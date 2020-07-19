@@ -175,7 +175,7 @@
  <section id="crew" class="section-padding ">
     <div class="container">
       <div>
-        <h3>Our crew</h3>
+        <h3><b>Our crew</b></h3>
         <p>A world-class airline exceeding customer expectations, through high-quality service, global connectivity,
          and commitment to excellence Uganda Airlines is Uganda’s flagship national passenger and cargo carrier. 
          We provide scheduled air transportation services in East Africa and near-international markets.</p>
@@ -194,7 +194,7 @@
 <section id="airport" class="section-padding">
     <div class="container">
       <div>
-        <h3>Our Airport</h3>
+        <h3><b>Our Airport</b></h3>
       <p>Uganda Airlines is Uganda’s flagship national passenger and cargo carrier. We provide scheduled 
       air transportation services in East Africa and near-international markets.</p>
       </div>
@@ -213,6 +213,24 @@
       <br>
     </div>
 </section>
+    <section id="comments" class="home-comments">
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-12">
+            <div class="single"><br>
+              <div class="form-group">
+              <label for="commentTextarea"><h2><b>Comments</b></h2></label>
+              <textarea class="form-control mb-4" id="commentTextarea" placeholder="Enter your comment" width="200px" rows="3"></textarea>
+              <span class="input-group-btn">
+                  <button class="btn btn-warning" type="submit">Comment</button>
+                </span>
+            </div><br>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <section class="home-newsletter">
       <div class="container">
         <div class="row">
@@ -222,7 +240,7 @@
               <div class="input-group">
                 <input type="email" class="form-control" placeholder="Enter your email">
                 <span class="input-group-btn">
-                  <button class="btn or" type="submit">Subscribe</button>
+                  <button class="btn btn-warning" type="submit">Subscribe</button>
                 </span>
               </div><br>
             </div>
@@ -321,9 +339,9 @@
           if(!isset($_COOKIE['user'])) {
               echo "Cookie named '" . 'user' . "' is not set!";
           } else {
-              echo "Welcome " . $_COOKIE['user'];
+              echo "Hey " . $_COOKIE['user'] . "!";
           }
-          ?></strong>  To Uganda Airlines Official Website
+          ?></strong> Welcome To Uganda Airlines Official Website
         <button type="button" class="close" data-dismiss="alert" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>

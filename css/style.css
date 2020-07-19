@@ -583,12 +583,21 @@ h4 {
     height: 32rem;
   }
 
-#airport,#crew,.carous{
+#airport,#crew,#comments,.carous{
   position: relative;
   background-color: RGBA(39, 47, 51, 0.6);
 }
 .section-padding{
   padding-top: 20px;
+}
+
+.home-comments{
+  margin-top: 10px;
+}
+.alert-warning{
+  background-color: rgba(236, 236, 236, 0.6) !important;
+  border-style: none;
+  color: black;
 }
 
 /* /{{{[[::[[[[[[[[[[..[[[[[[[[..[[[[[[[[[[[[[[..]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]}}} */
