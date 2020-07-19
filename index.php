@@ -318,16 +318,17 @@
       <div class="alert alert-warning alert-dismissible fade show" style="position:fixed;bottom:0px;width:100%;" role="alert">
         <strong>
         <?php
-if(!isset($_COOKIE['user'])) {
-    echo "Cookie named '" . 'user' . "' is not set!";
-} else {
-    echo "Welcome " . $_COOKIE['user'];
-}
-?></strong>  To Uganda Airlines Official Website
+          if(!isset($_COOKIE['user'])) {
+              echo "Cookie named '" . 'user' . "' is not set!";
+          } else {
+              echo "Welcome " . $_COOKIE['user'];
+          }
+          ?></strong>  To Uganda Airlines Official Website
         <button type="button" class="close" data-dismiss="alert" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>
       </div>
+
   <script src="js/hide.js"></script>
   <script src="js/jquery.min.js"></script>
   <script src="js/slick.js"></script>

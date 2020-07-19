@@ -162,7 +162,7 @@
 			mysqli_query($db, $query);
 
 			$_SESSION['username'] = $username;
-			$_SESSION['success'] = "Booked successfuly";
+			$_SESSION['booked'] = "Booked successfuly";
 			header('location: index.php');
 		}
 

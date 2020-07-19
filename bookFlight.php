@@ -54,9 +54,10 @@
             <label for="departure" class="white">Departure Port</label>
             <select class="custom-select d-block w-100" name="dport" id="departure" required>
               <option>Entebbe</option>
-              <option>Kampala</option>
+              <option>Dubai</option>
               <option>Nairobi</option>
-              <option>Dar-el-salaam</option>
+              <option>JFK</option>
+              <option>Detrioit</option>
             </select>
             <div class="invalid-feedback">
               Please provide a valid Port.
@@ -65,10 +66,11 @@
           <div class="col-md-4 mb-3">
             <label for="arrival" class="white">Arrival Port</label>
             <select class="custom-select d-block w-100" name="aport" id="arrival" required>
-              <option>Entebbe</option>
-              <option>Kampala</option>
               <option>Nairobi</option>
-              <option>Dar-el-salaam</option>
+              <option>Dubai</option>
+              <option>JFK</option>
+              <option>Entebbe</option>
+              <option>Detrioit</option>
             </select>
             <div class="invalid-feedback">
               Please provide a valid Port.
@@ -133,7 +135,7 @@
         </div>
 
         <div class="input-group serh">
-          <p>Search Flight</p>
+        <button type="button" class="btn btn-warning">Search Flight</button>
         </div>
         <br><br>
         <hr class="mb-4">
