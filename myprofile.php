@@ -14,7 +14,7 @@
     <link rel="stylesheet" type="text/css" href="css/style.css">
 
     <link rel="icon" href="favicon.ico">
-    <title>Uganda Airlines bookings</title>
+    <title>Uganda Airlines</title>
 
 </head>
 
@@ -32,7 +32,7 @@
                 <div style="width: 100px; height: 100px;">
                     <img src="images/logo.png" class="d-block w-100 rounded" alt="...">
                 </div><br>
-                <h1><b>Passengers traveling with Uganda Airlines</b></h1>
+                <h1><b>My profile</b></h1>
         <table id="t98">
             <tr>
                 <th><h1>travelId</h1></th>

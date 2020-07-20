@@ -659,3 +659,24 @@ h4 {
   color: rgb(255, 230, 0) !important;
   text-shadow: 2px 2px black  !important;
 }
+table#t98, th, td {
+  border: 1px solid gray;
+  border-collapse: collapse;
+}
+
+th, td {
+  padding: 15px 20px;
+}
+
+table#t98 tr:nth-child(even) {
+  color: black;
+  background-color: rgba(238, 238, 238, 0.5);
+}
+table#t98 tr:nth-child(odd) {
+  color: black;
+  background-color: rgba(255, 255, 255, 0.5);
+}
+table#t98 th {
+  color: white;
+  background-color: rgb(94, 93, 93);
+}

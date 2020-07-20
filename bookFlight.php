@@ -86,13 +86,6 @@
               Please provide a valid Date.
             </div>
           </div>
-          <div class="col-md-4 mb-3">
-            <label for="" class="white">Departure Time</label>
-            <input class="form-control" type="time">
-            <div class="invalid-feedback">
-              Please provide a valid time.
-            </div>
-          </div>
         </div>
 
         <h2>Number of Travelers</h2>

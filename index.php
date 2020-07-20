@@ -67,11 +67,11 @@
             <li class="nav-item"><a class="nav-link" href="pages/destinations.html">Destinations</a></li>
 
             <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-toggle="dropdown">Flights</a>
+              <a class="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-toggle="dropdown">Details</a>
               <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                <a class="dropdown-item" href="">To Uganda</a>
+                <a class="dropdown-item" href="bookings.php">Details</a>
                 <div class="dropdown-divider"></div>
-                <a class="dropdown-item" href="">From Uganda</a>
+                <a class="dropdown-item" href="myprofile.php">My Profile</a>
               </div>
             </li>
             <li class="nav-item"><a class="nav-link" href="pages/contact.html">Contact Us</a></li>
