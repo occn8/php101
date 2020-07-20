@@ -354,7 +354,6 @@
   <script src="js/bootstrap.min.js"></script>
   <script src="js/wow.js"></script>
   <script src="js/custom.js"></script>
-  <script src="contactform/contactform.js"></script>
   <script src="js/popper.min.js"></script>
 
   <script type="text/javascript">
