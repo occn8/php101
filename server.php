@@ -57,6 +57,8 @@
 		)";
 		mysqli_query($db, $sql2);
 
+		
+
 	// [REGISTER USER]
 	if (isset($_POST['register_user'])) {
 		$fname = mysqli_real_escape_string($db, $_POST['fname']);
@@ -69,11 +71,14 @@
 		$zip = mysqli_real_escape_string($db, $_POST['zip']);
 		$password_1 = mysqli_real_escape_string($db, $_POST['password_1']);
 		$password_2 = mysqli_real_escape_string($db, $_POST['password_2']);
+		$sql_u = "SELECT * FROM users WHERE username='$username'";
+		$res_u = mysqli_query($db, $sql_u);
 
 
 		if (empty($fname)) { array_push($errors, "First name is required"); }
 		if (empty($lname)) { array_push($errors, "Last name is required"); }
 		if (empty($username)) { array_push($errors, "Username is required"); }
+		if (mysqli_num_rows($res_u) > 0) { array_push($errors, "Sorry... username already taken"); }
 		if (empty($email)) { array_push($errors, "Email is required"); }
 		if (empty($password_1)) { array_push($errors, "Password is required"); }
 
@@ -87,10 +92,11 @@
 			$query = "INSERT INTO users (fname, lname, username, email, address, country, district, zip, password) 
 					  VALUES('$fname','$lname', '$username', '$email', '$address', '$country', '$district', '$zip', '$password')";
 			mysqli_query($db, $query);
+			$user_id = mysqli_insert_id($db);
 
 			$_SESSION['username'] = $username;
 			$_SESSION['success'] = "You are logged in";
-			setcookie('user', $username, time() + (86400 * 2), "/");
+			setcookie('id', $user_id, time() + (86400 * 2), "/");
 			header('location: index.php');
 		}
 
@@ -116,7 +122,9 @@
 			if (mysqli_num_rows($results) == 1) {
 				$_SESSION['username'] = $username;
 				$_SESSION['success'] = "You are logged in";
-				setcookie('user', $username, time() + (86400 * 2), "/");
+				$user_id = mysqli_insert_id($db);
+
+				setcookie('id', $user_id, time() + (86400 * 2), "/");
 				header('location: index.php');
 			}else {
 				array_push($errors, "Wrong username, Password combination");
@@ -161,11 +169,50 @@
 					  VALUES('$trip','$dport', '$aport', '$adults', '$children', '$infants', '$class', '$paymentMethod', '$ccname', '$ccnum', '$ccexp', '$cvv')";
 			mysqli_query($db, $query);
 
-			$_SESSION['username'] = $username;
 			$_SESSION['booked'] = "Booked successfuly";
 			header('location: index.php');
 		}
 
 	}
 
+	$sq = "UPDATE users SET lname='angie' WHERE id=2";
+	// mysqli_query($db, $sq);
+	if ($db->query($sq) === TRUE) {
+	    echo "Record updated successfully";
+	} else {
+	    echo "Error updating record: " . $db->error;
+	}
+
+	$sq2 = "DELETE FROM users WHERE id='$_COOKIE[id]'";
+	if ($db->query($sq2) === TRUE) {
+	    echo "Record deleted successfully";
+	} else {
+	    echo "Error deleting record: " . $db->error;
+	}
+
+	$sql = "SELECT travelId, trip, class FROM bookings";
+	$result = $db->query($sql);
+	if ($result->num_rows > 0) {
+	    while($row = $result->fetch_assoc()) {
+	        echo "travelId: " . $row["travelId"]. " - Travel class: " . $row["class"]. " " . $row["trip"]. "<br>";
+	    }
+	} else {
+	    echo "0 results";
+	}
+
+// $sp = "INSERT INTO MyGuests (firstname, lastname, email)
+// VALUES ('John', 'Doe', 'john@example.com');";
+// $sp .= "INSERT INTO MyGuests (firstname, lastname, email)
+// VALUES ('Mary', 'Moe', 'mary@example.com');";
+// $sp .= "INSERT INTO MyGuests (firstname, lastname, email)
+// VALUES ('Julie', 'Dooley', 'julie@example.com')";
+
+// if ($db->multi_query($sp) === TRUE) {
+//     echo "New records created successfully";
+// } else {
+//     echo "Error: " . $sp . "<br>" . $db->error;
+// }
+
+
+	mysqli_close($db);
 ?>

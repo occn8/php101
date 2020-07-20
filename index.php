@@ -336,10 +336,10 @@
       <div class="alert alert-warning alert-dismissible fade show" style="position:fixed;bottom:0px;width:100%;" role="alert">
         <strong>
         <?php
-          if(!isset($_COOKIE['user'])) {
+          if(!isset($_SESSION['username'])) {
               echo "Cookie named '" . 'user' . "' is not set!";
           } else {
-              echo "Hey " . $_COOKIE['user'] . "!";
+              echo "Hey " . $_SESSION['username'] . "!";
           }
           ?></strong> Welcome To Uganda Airlines Official Website
         <button type="button" class="close" data-dismiss="alert" aria-label="Close">

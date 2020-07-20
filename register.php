@@ -101,7 +101,6 @@
       <div class="col-md-5 mb-3">
         <label for="country" class="white f-left">Country</label>
         <select class="custom-select d-block w-100" name="country" id="country" required>
-          <option value="">Choose..</option>
           <option>Uganda</option>
           <option>Kenya</option>
           <option>Tanzania</option>
@@ -114,7 +113,6 @@
       <div class="col-md-4 mb-3">
         <label for="state" class="white f-left">District | State</label>
         <select class="custom-select d-block w-100" name="district" id="state" required>
-          <option value="">Choose..</option>
           <option>Entebbe</option>
           <option>Kampala</option>
           <option>Nairobi</option>
