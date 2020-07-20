@@ -651,3 +651,7 @@ h4 {
 .pad{
   padding: 2px 40px;
 }
+.close{
+  color: red !important;
+  text-shadow: 2px 2px black  !important;
+}
