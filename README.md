@@ -4,7 +4,7 @@ ___
 
 ## [Uganda Airlines Website](https://occn8.github.io/ua-uid/) 
 
-<img src="./favicon.ico" width="250px" />
+<img src="./bin/favicon.ico" width="250px" />
 ___
 
 ### responsive Airline website
@@ -16,9 +16,9 @@ ___
   > [mysite](https://...mysite..)
 
 
-## How to Use
-* [x] __Make sure__ xampp or `any` is started
-* [x] __Copy__ project folder to location like 'PWD'/lampp/htdocs/
+## Running Project
+* [x] __Make sure__ xampp or `any-other` is started or running
+* [x] __Move__ the project folder(php101) to location 'PWD'/lampp/htdocs/
 * [x] __Then__ Paste this URL to your browser `http://localhost/php101/bin/index.php`
 * [✓] __Done__
 
