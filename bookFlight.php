@@ -33,7 +33,7 @@
         <h1><b>Book Your flight Here</b></h1><br>
       </center>
       <form class="needs-validation" method="post" action="bookFlight.php" novalidate>
-        <div class="white"><?php include('errors.php'); ?></div>
+        <?php include('errors.php'); ?>
         <div class="form-row">
           <div class="custom-control custom-radio col-md-4 mb-3">
             <input id="one" name="trip" type="radio" value="oneway" class="custom-control-input" checked required>

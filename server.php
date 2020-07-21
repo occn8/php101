@@ -1,6 +1,8 @@
 <?php 
 	session_start();
-
+	// if (session_status() == PHP_SESSION_NONE) {
+	// 	session_start();
+	//   }
 	$username = "";
 	$email    = "";
 	$errors = array(); 
@@ -57,6 +59,13 @@
 		)";
 		mysqli_query($db, $sql2);
 
+		$sql3 = "CREATE TABLE IF NOT EXISTS comments (
+			commentId INT(6) UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+			username VARCHAR(30) NOT NULL,
+			comment VARCHAR(100) NOT NULL
+			)";
+			mysqli_query($db, $sql3);
+	
 		
 
 	// [REGISTER USER]
@@ -74,13 +83,15 @@
 		$sql_u = "SELECT * FROM users WHERE username='$username'";
 		$res_u = mysqli_query($db, $sql_u);
 
-
+		
 		if (empty($fname)) { array_push($errors, "First name is required!"); }
+		else{if(!preg_match("/[a-zA-Z]{3,30}$/", $fname)){ array_push($errors, "Invalid First name!"); }}
 		if (empty($lname)) { array_push($errors, "Last name is required!"); }
 		if (empty($username)) { array_push($errors, "Username is required!"); }
 		if (mysqli_num_rows($res_u) > 0) { array_push($errors, "Sorry.. Username already taken!"); }
 		if (empty($email)) { array_push($errors, "Email is required!"); }
 		if (empty($password_1)) { array_push($errors, "Password is required!"); }
+		if(!preg_match("/[0-9]{5}$/", $zip)){ array_push($errors, "Invalid Zip code!"); }
 
 		if ($password_1 != $password_2) {
 			array_push($errors, "Passwords do not match!");
@@ -175,22 +186,40 @@
 
 	}
 
-	$sq = "UPDATE users SET lname='angie' WHERE id=2";
-	// mysqli_query($db, $sq);
-	if ($db->query($sq) === TRUE) {
-	    // echo "Record updated successfully";
-	} else {
-	    echo "Error updating record: " . $db->error;
-	}
+	// // [COMMENTS]
+	// if (isset($_POST['place_comment'])) {
+	// 	$comment = mysqli_real_escape_string($db, $_POST['comment']);
 
-	$sq2 = "DELETE FROM users WHERE id='$_COOKIE[id]'";
-	if ($db->query($sq2) === TRUE) {
-	    // echo "Record deleted successfully";
-	} else {
-	    echo "Error deleting record: " . $db->error;
-	}
+	
+	// 	if (empty($comment)) {
+	// 		array_push($errors, "comment is required");
+	// 	}
 
-	$querry_s = "SELECT * FROM bookings";
+	// 	if (count($errors) == 0) {
+	// 		$query = "INSERT INTO comments (username, comment) 
+	// 				  VALUES('$_SESSION[username]', '$comment')";
+	// 		mysqli_query($db, $query);
+
+	// 		header('location: index.php');
+	// 	}
+	// }
+
+	// $sq = "UPDATE users SET lname='angie' WHERE id=2";
+	// // mysqli_query($db, $sq);
+	// if ($db->query($sq) === TRUE) {
+	//     // echo "Record updated successfully";
+	// } else {
+	//     echo "Error updating record: " . $db->error;
+	// }
+
+	// $sq2 = "DELETE FROM users WHERE id='$_COOKIE[id]'";
+	// if ($db->query($sq2) === TRUE) {
+	//     // echo "Record deleted successfully";
+	// } else {
+	//     echo "Error deleting record: " . $db->error;
+	// }
+
+$querry_s = "SELECT * FROM bookings";
 	$result = $db->query($querry_s);
 	if ($result->num_rows > 0) {
 	    // while($row = $result->fetch_assoc()) {
@@ -199,6 +228,13 @@
 	} else {
 	    echo "0 results";
 	}
+
+	$querry_user = "SELECT * FROM users";
+	$userresult = $db->query($querry_user);
+	if ($userresult->num_rows > 0) {
+	} else {
+	    echo "0 results";
+    }
 
 // $sp = "INSERT INTO MyGuests (firstname, lastname, email)
 // VALUES ('John', 'Doe', 'john@example.com');";

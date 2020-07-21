@@ -1,5 +1,4 @@
 
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -28,10 +27,7 @@
     </div>
     <main class="about">
         <div class="container">
-            <center>
-                <div style="width: 100px; height: 100px;">
-                    <img src="images/logo.png" class="d-block w-100 rounded" alt="...">
-                </div><br>
+            <center><br>
                 <h1><b>Passengers traveling with Uganda Airlines</b></h1>
         <table id="t98">
             <tr>
@@ -42,7 +38,7 @@
                 <th><h1>children</h1></th>
                 <th><h1>infants</h1></th>
             </tr>
-            <?php include('server.php') ?>
+            <?php include('server.php'); ?>
             <?php foreach($result as $booking):?>
             <tr>
                 <td><?php echo $booking['travelId']; ?></td>
