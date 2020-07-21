@@ -38,7 +38,7 @@
                 <th><h1>children</h1></th>
                 <th><h1>infants</h1></th>
             </tr>
-            <?php include('server.php'); ?>
+            <?php include('../config/server.php') ?>
             <?php foreach($result as $booking):?>
             <tr>
                 <td><?php echo $booking['travelId']; ?></td>

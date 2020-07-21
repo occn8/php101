@@ -8,7 +8,7 @@
 	$errors = array(); 
 	$_SESSION['success'] = "";
 
-	require('../config/create.php');		
+	require('create.php');		
 
 	// [REGISTER USER]
 	if (isset($_POST['register_user'])) {

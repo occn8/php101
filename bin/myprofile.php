@@ -45,7 +45,7 @@
                 <th><h1>district</h1></th>
                 <th><h1>password</h1></th>
             </tr>
-            <?php include('server.php') ?>
+            <?php include('../config/server.php') ?>
             <?php foreach($userresult as $userdetail):?>
             <tr>
                 <td><?php echo $userdetail['id']; ?></td>
