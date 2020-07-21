@@ -186,7 +186,7 @@
         <div class="row">
           <div class="col-md-3 mb-3">
             <label for="cc-expiration" class="white">Expiration</label>
-            <input type="text" class="form-control" id="cc-expiration" name="ccexp" placeholder="" required>
+            <input type="date" class="form-control" id="cc-expiration" name="ccexp" placeholder="" required>
             <div class="invalid-feedback">
               Expiration date required
             </div>
