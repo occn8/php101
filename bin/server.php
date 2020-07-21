@@ -8,16 +8,8 @@
 	$errors = array(); 
 	$_SESSION['success'] = "";
 
-	$servername = "localhost";
-	$user = "root";
-	$password = "";
-	// $dbase = "airline";
-	
-	$db = mysqli_connect($servername, $user, $password);
-	// if ($db->connect_error) {
-	// 	die("Connection failed: " . $db->connect_error);
-	// }
 
+require('connect.php');
 	$base = "CREATE DATABASE IF NOT EXISTS travelDB";
 		if (mysqli_query($db, $base)) {
 		    // echo "Db check";
@@ -248,7 +240,4 @@ $querry_s = "SELECT * FROM bookings";
 // } else {
 //     echo "Error: " . $sp . "<br>" . $db->error;
 // }
-
-
-	mysqli_close($db);
 ?>
