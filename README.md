@@ -2,14 +2,13 @@
 # __PHP Project__
 ___
 
-## [Uganda Airlines Website](https://occn8.github.io/ua-uid/) 
+## Uganda Airlines Website
 
 <img src="./bin/favicon.ico" width="250px" />
 ___
 
 ### responsive Airline website
 > Based off the Uganda Airlines website.
-## Check out [website](https://occn8.github.io/ua-uid/)
 
 ### Designed By
   [ochenhillary](https://github.com/occn8)
@@ -19,7 +18,7 @@ ___
 ## Running Project
 * [x] __Make sure__ xampp or `any-other` is started or running
 * [x] __Move__ the project folder(php101) to location 'PWD'/lampp/htdocs/
-* [x] __Then__ Paste this URL to your browser `http://localhost/php101/bin/index.php`
+* [x] __Then__ Paste this URL to your browser `http://localhost/php101/bin/index.php`.
 * [✓] __Done__
 
 ### License
