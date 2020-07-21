@@ -8,57 +8,7 @@
 	$errors = array(); 
 	$_SESSION['success'] = "";
 
-
-require('../config/connect.php');
-	$base = "CREATE DATABASE IF NOT EXISTS travelDB";
-		if (mysqli_query($db, $base)) {
-		    // echo "Db check";
-		} else {
-		    echo "Error creating database: " . mysqli_error($db);
-		}
-
-	$use = "USE travelDB";
-		mysqli_query($db, $use);
-
-	$sql = "CREATE TABLE IF NOT EXISTS users (
-		id INT(6) UNSIGNED AUTO_INCREMENT PRIMARY KEY,
-		fname VARCHAR(30) NOT NULL,
-		lname VARCHAR(30) NOT NULL,
-		username VARCHAR(30) NOT NULL,
-		email VARCHAR(50),
-		address VARCHAR(20) NOT NULL,
-		country VARCHAR(20),
-		district VARCHAR(20),
-		zip VARCHAR(10),
-		password VARCHAR(50)
-		)";
-		mysqli_query($db, $sql);
-
-	 $sql2 = "CREATE TABLE IF NOT EXISTS bookings (
-		travelId INT(6) UNSIGNED AUTO_INCREMENT PRIMARY KEY,
-		trip VARCHAR(20) NOT NULL,
-		dport VARCHAR(30) NOT NULL,
-		aport VARCHAR(30) NOT NULL,
-		adults VARCHAR(5),
-		children VARCHAR(5),
-		infants VARCHAR(5),
-		class VARCHAR(20) NOT NULL,
-		paymentMethod VARCHAR(20),
-		ccname VARCHAR(30),
-		ccnum VARCHAR(30),
-		ccexp VARCHAR(30),
-		cvv VARCHAR(10)
-		)";
-		mysqli_query($db, $sql2);
-
-		$sql3 = "CREATE TABLE IF NOT EXISTS comments (
-			commentId INT(6) UNSIGNED AUTO_INCREMENT PRIMARY KEY,
-			username VARCHAR(30) NOT NULL,
-			comment VARCHAR(100) NOT NULL
-			)";
-			mysqli_query($db, $sql3);
-	
-		
+	require('../config/create.php');		
 
 	// [REGISTER USER]
 	if (isset($_POST['register_user'])) {
@@ -74,7 +24,6 @@ require('../config/connect.php');
 		$password_2 = mysqli_real_escape_string($db, $_POST['password_2']);
 		$sql_u = "SELECT * FROM users WHERE username='$username'";
 		$res_u = mysqli_query($db, $sql_u);
-
 		
 		if (empty($fname)) { array_push($errors, "First name is required!"); }
 		else{if(!preg_match("/[a-zA-Z]{3,30}$/", $fname)){ array_push($errors, "Invalid First name!"); }}
@@ -83,8 +32,7 @@ require('../config/connect.php');
 		if (mysqli_num_rows($res_u) > 0) { array_push($errors, "Sorry.. Username already taken!"); }
 		if (empty($email)) { array_push($errors, "Email is required!"); }
 		if (empty($password_1)) { array_push($errors, "Password is required!"); }
-		if(!preg_match("/[0-9]{5}$/", $zip)){ array_push($errors, "Invalid Zip code!"); }
-
+		if(!preg_match("/[0-9]{4,5}$/", $zip)){ array_push($errors, "Invalid Zip code!"); }
 		if ($password_1 != $password_2) {
 			array_push($errors, "Passwords do not match!");
 		}
@@ -211,7 +159,7 @@ require('../config/connect.php');
 	//     echo "Error deleting record: " . $db->error;
 	// }
 
-$querry_s = "SELECT * FROM bookings";
+	$querry_s = "SELECT * FROM bookings";
 	$result = $db->query($querry_s);
 	if ($result->num_rows > 0) {
 	    // while($row = $result->fetch_assoc()) {
@@ -228,16 +176,4 @@ $querry_s = "SELECT * FROM bookings";
 	    echo "0 results";
     }
 
-// $sp = "INSERT INTO MyGuests (firstname, lastname, email)
-// VALUES ('John', 'Doe', 'john@example.com');";
-// $sp .= "INSERT INTO MyGuests (firstname, lastname, email)
-// VALUES ('Mary', 'Moe', 'mary@example.com');";
-// $sp .= "INSERT INTO MyGuests (firstname, lastname, email)
-// VALUES ('Julie', 'Dooley', 'julie@example.com')";
-
-// if ($db->multi_query($sp) === TRUE) {
-//     echo "New records created successfully";
-// } else {
-//     echo "Error: " . $sp . "<br>" . $db->error;
-// }
 ?>

@@ -1,3 +1,24 @@
+<?php
+require('../config/create.php');
+
+	if (isset($_POST['place_comment'])) {
+		$comment = mysqli_real_escape_string($db, $_POST['comment']);
+
+	
+		if (empty($comment)) {
+			array_push($errors, "comment is required");
+		}
+
+		if (count($errors) == 0) {
+			$query = "INSERT INTO comments (username, comment) 
+					  VALUES('$_SESSION[username]', '$comment')";
+			mysqli_query($db, $query);
+
+			header('location: index.php');
+		}
+	}
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -120,6 +141,28 @@
         <br>
       </center>
     </div>
+<!--     
+   <section id="comments" class="home-comments">
+      <div class="container">
+        <div class="row">
+        <form method="post" action="index.php" class="needs-validation">
+        <?php include('errors.php'); ?>
+          <div class="col-sm-12">
+            <div class="single"><br>
+              <div class="form-group">
+              <label for="commentTextarea"><h2><b>Leave a Comment</b></h2></label>
+              <textarea class="form-control mb-4" id="commentTextarea"  name="comment" placeholder="Enter your comment" width="600px" rows="3"></textarea>
+              <span class="input-group-btn">
+             
+                  <button class="btn btn-warning" type="submit" name="place_comment">Comment</button>
+                </span>
+            </div><br>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section><br> -->
 
     <footer id="o-footer" class="abst" role="contentinfo">
       <div class="o-container">
@@ -212,12 +255,12 @@
 
   </main>
 
-  <script src="../js/jquery.min.js"></script>
-  <script src="../js/jquery.easing.min.js"></script>
-  <script src="../js/bootstrap.min.js"></script>
-  <script src="../js/wow.js"></script>
-  <script src="../js/custom.js"></script>
-  <script src="../js/popper.min.js"></script>
+  <script src="js/jquery.min.js"></script>
+  <script src="js/jquery.easing.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/wow.js"></script>
+  <script src="js/custom.js"></script>
+  <script src="js/popper.min.js"></script>
 </body>
 
 </html>

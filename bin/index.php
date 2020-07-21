@@ -74,7 +74,7 @@
                 <a class="dropdown-item" href="myprofile.php">My Profile</a>
               </div>
             </li>
-            <li class="nav-item"><a class="nav-link" href="contact.html">Contact Us</a></li>
+            <li class="nav-item"><a class="nav-link" href="contact.php">Contact Us</a></li>
             <li class="nav-item"><a class="nav-link" href="about.html">About Us</a></li>
           
             <li class="nav-item">
@@ -230,27 +230,6 @@
         </div>
       </div>
     </section>
-    <!-- <section id="comments" class="home-comments">
-      <div class="container">
-        <div class="row">
-        <form method="post" action="index.php" class="needs-validation">
-        <?php include('comment.php');include('errors.php'); ?>
-          <div class="col-sm-12">
-            <div class="single"><br>
-              <div class="form-group">
-              <label for="commentTextarea"><h2><b>Comments</b></h2></label>
-              <textarea class="form-control mb-4" id="commentTextarea"  name="comment" placeholder="Enter your comment" width="200px" rows="3"></textarea>
-              <span class="input-group-btn">
-             
-                  <button class="btn btn-warning" type="submit" name="place_comment">Comment</button>
-                </span>
-            </div><br>
-            </div>
-          </div>
-
-        </div>
-      </div>
-    </section> -->
 
     <section class="home-newsletter">
       <div class="container">
