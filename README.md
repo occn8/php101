@@ -11,15 +11,13 @@ ___
 > Based off the Uganda Airlines website.
 
 ### Designed By
-  [ochenhillary](https://github.com/occn8)
-  > [mysite](https://...mysite..)
-
+  > [ochenhillary](https://github.com/occn8)
 
 ## Running Project
 * [x] __Make sure__ xampp or `any-other` is started or running
 * [x] __Move__ the project folder(php101) to location 'PWD'/lampp/htdocs/
-* [x] __Then__ Paste this URL to your browser `http://localhost/php101/bin/index.php`.
-* [✓] __Done__
+* [x] __Then__ Paste this URL `http://localhost/php101/bin/index.php` to your browser
+* [x] __Done__
 
 ### License
 
