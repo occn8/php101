@@ -9,7 +9,7 @@
 	$_SESSION['success'] = "";
 
 
-require('connect.php');
+require('../config/connect.php');
 	$base = "CREATE DATABASE IF NOT EXISTS travelDB";
 		if (mysqli_query($db, $base)) {
 		    // echo "Db check";
