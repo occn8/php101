@@ -1,5 +1,5 @@
 
-# __UID Project__
+# __PHP Project__
 ___
 
 ## [Uganda Airlines Website](https://occn8.github.io/ua-uid/) 
@@ -7,8 +7,8 @@ ___
 <img src="./favicon.ico" width="250px" />
 ___
 
-### responsive travel website
-
+### responsive Airline website
+> Based off the Uganda Airlines website.
 ## Check out [website](https://occn8.github.io/ua-uid/)
 
 ### Designed By
@@ -16,7 +16,8 @@ ___
   > [mysite](https://...mysite..)
 
 
-## About
-> Based off the pearl application.
+## How to Use
+
+
 
 ## Screenshots

@@ -64,7 +64,7 @@
           <ul class="navbar-nav ml-auto">
             <li class="nav-item active"><a class="nav-link" href="">Home</a></li>
             <li class="nav-item"><a class="nav-link" href="bookFlight.php">Book flight</a></li>
-            <li class="nav-item"><a class="nav-link" href="pages/destinations.html">Destinations</a></li>
+            <li class="nav-item"><a class="nav-link" href="destinations.html">Destinations</a></li>
 
             <li class="nav-item dropdown">
               <a class="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-toggle="dropdown">Details</a>
@@ -74,8 +74,8 @@
                 <a class="dropdown-item" href="myprofile.php">My Profile</a>
               </div>
             </li>
-            <li class="nav-item"><a class="nav-link" href="pages/contact.html">Contact Us</a></li>
-            <li class="nav-item"><a class="nav-link" href="pages/about.html">About Us</a></li>
+            <li class="nav-item"><a class="nav-link" href="contact.html">Contact Us</a></li>
+            <li class="nav-item"><a class="nav-link" href="about.html">About Us</a></li>
           
             <li class="nav-item">
               <?php  if (isset($_SESSION['username'])) : ?>
