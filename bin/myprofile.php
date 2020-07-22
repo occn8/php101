@@ -29,38 +29,33 @@
     <main class="about">
         <div class="container">
             <center>
-                <div style="width: 100px; height: 100px;">
-                    <img src="images/logo.png" class="d-block w-100 rounded" alt="...">
-                </div><br>
+                <br>
                 <h1><b>My profile</b></h1>
-        <table id="t98">
-            <tr>
-                <th><h1>userId</h1></th>
-                <th><h1>fname</h1></th>
-                <th><h1>lname</h1></th>
-                <th><h1>username</h1></th>
-                <th><h1>email</h1></th>
-                <th><h1>address</h1></th>
-                <th><h1>country</h1></th>
-                <th><h1>district</h1></th>
-                <th><h1>password</h1></th>
-            </tr>
+        <table id="t9">
             <?php include('../config/server.php') ?>
             <?php foreach($userresult as $userdetail):?>
             <tr>
-                <td><?php echo $userdetail['id']; ?></td>
-                <td><?php echo $userdetail['fname']; ?></td>
-                <td><?php echo $userdetail['lname']; ?></td>
-                <td><?php echo $userdetail['username']; ?></td>
-                <td><?php echo $userdetail['email']; ?></td>
-                <td><?php echo $userdetail['address']; ?></td>
-                <td><?php echo $userdetail['country']; ?></td>
-                <td><?php echo $userdetail['district']; ?></td>
-                <td><?php echo $userdetail['password']; ?></td>
+                <tr><th><h1>First-name</h1></th><td><?php echo $userdetail['fname']; ?></td></tr>
+                <tr><th><h1>Last-name</h1></th><td><?php echo $userdetail['lname']; ?></td></tr>
+                <tr><th><h1>Username</h1></th><td><?php echo $userdetail['username']; ?></td></tr>
+                <tr><th><h1>Email</h1></th><td><?php echo $userdetail['email']; ?></td></tr>
+                <tr><th><h1>Address</h1></th><td><?php echo $userdetail['address']; ?></td></tr>
+                <tr><th><h1>Country</h1></th><td><?php echo $userdetail['country']; ?></td></tr>
+                <tr><th><h1>District</h1></th><td><?php echo $userdetail['district']; ?></td></tr>
             </tr>
             <?php endforeach; ?>
         </table>
         <br>
+            <div class="del">
+                <h1><b>Delete Account</b></h1>
+                <?php include('errors.php'); ?>
+
+                <form action="myprofile.php" method="post">
+                    <label for="" class="white">Enter Password:</label>
+                    <input type="password" name="password" class="mb-3">
+                    <button type="submit" class="btn btn-warning col-md-4" name="delete_user">Delete Account</button>
+                </form><br>
+            </div><br>
             
             </center>
         </div>

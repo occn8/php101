@@ -27,6 +27,7 @@ $sql = "CREATE TABLE IF NOT EXISTS users (
 
 $sql2 = "CREATE TABLE IF NOT EXISTS bookings (
     travelId INT(6) UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+    username VARCHAR(30) NOT NULL,
     trip VARCHAR(20) NOT NULL,
     dport VARCHAR(30) NOT NULL,
     aport VARCHAR(30) NOT NULL,

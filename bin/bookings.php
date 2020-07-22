@@ -32,6 +32,7 @@
         <table id="t98">
             <tr>
                 <th><h1>travelId</h1></th>
+                <th><h1>Traveler</h1></th>
                 <th><h1>trip</h1></th>
                 <th><h1>class</h1></th>
                 <th><h1>adults</h1></th>
@@ -42,6 +43,7 @@
             <?php foreach($result as $booking):?>
             <tr>
                 <td><?php echo $booking['travelId']; ?></td>
+                <td><?php echo $booking['username']; ?></td>
                 <td><?php echo $booking['trip']; ?></td>
                 <td><?php echo $booking['class']; ?></td>
                 <td><?php echo $booking['adults']; ?></td>

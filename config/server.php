@@ -98,7 +98,6 @@
 		$ccexp = mysqli_real_escape_string($db, $_POST['ccexp']);
 		$cvv = mysqli_real_escape_string($db, $_POST['cvv']);
 
-
 		if (empty($trip)) { array_push($errors, "Trip is required!"); }
 		if (empty($dport)) { array_push($errors, "Departure port is required!"); }
 		if (empty($aport)) { array_push($errors, "Arrival port is required!"); }
@@ -116,33 +115,15 @@
 		}
 
 		if (count($errors) == 0) {
-			$query = "INSERT INTO bookings (trip, dport, aport, adults, children, infants, class, paymentMethod, ccname, ccnum, ccexp, cvv) 
-					  VALUES('$trip','$dport', '$aport', '$adults', '$children', '$infants', '$class', '$paymentMethod', '$ccname', '$ccnum', '$ccexp', '$cvv')";
+			$query = "INSERT INTO bookings (username, trip, dport, aport, adults, children, infants, class, paymentMethod, ccname, ccnum, ccexp, cvv) 
+					  VALUES('$_SESSION[username]','$trip','$dport', '$aport', '$adults', '$children', '$infants', '$class', '$paymentMethod', '$ccname', '$ccnum', '$ccexp', '$cvv')";
 			mysqli_query($db, $query);
 
 			$_SESSION['booked'] = "Booked successfuly";
-			header('location: index.php');
+			header('location: bookings.php');
 		}
 
 	}
-
-	// // [COMMENTS]
-	// if (isset($_POST['place_comment'])) {
-	// 	$comment = mysqli_real_escape_string($db, $_POST['comment']);
-
-	
-	// 	if (empty($comment)) {
-	// 		array_push($errors, "comment is required");
-	// 	}
-
-	// 	if (count($errors) == 0) {
-	// 		$query = "INSERT INTO comments (username, comment) 
-	// 				  VALUES('$_SESSION[username]', '$comment')";
-	// 		mysqli_query($db, $query);
-
-	// 		header('location: index.php');
-	// 	}
-	// }
 
 	// $sq = "UPDATE users SET lname='angie' WHERE id=2";
 	// // mysqli_query($db, $sq);
@@ -151,6 +132,25 @@
 	// } else {
 	//     echo "Error updating record: " . $db->error;
 	// }
+
+	if (isset($_POST['delete_user'])) {
+		$password = mysqli_real_escape_string($db, $_POST['password']);
+
+		if (empty($password)) { array_push($errors, "Password is required!"); }
+		// if ($password != $password) {
+		// 	array_push($errors, "Password does not match!");
+		// }
+
+		if (count($errors) == 0) {
+			$query = "DELETE FROM users WHERE id='$_COOKIE[id]'";
+			mysqli_query($db, $query);
+
+			session_destroy();
+			unset($_SESSION['username']);
+			header('location: logIn.php');
+		}
+	
+	}
 
 	// $sq2 = "DELETE FROM users WHERE id='$_COOKIE[id]'";
 	// if ($db->query($sq2) === TRUE) {
@@ -169,7 +169,7 @@
 	    echo "0 results";
 	}
 
-	$querry_user = "SELECT * FROM users";
+	$querry_user = "SELECT * FROM users WHERE id='$_COOKIE[id]'";
 	$userresult = $db->query($querry_user);
 	if ($userresult->num_rows > 0) {
 	} else {
