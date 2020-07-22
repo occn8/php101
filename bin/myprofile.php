@@ -1,4 +1,3 @@
-<?php include('../config/server.php') ?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -29,6 +28,7 @@
     <main class="about">
         <div class="container">
             <center>
+            <?php include('../config/server.php') ?>
                 <?php include('errors.php'); ?>
                 <br>
                 <h1><b>My profile</b></h1>
@@ -57,7 +57,7 @@
                 </form><br>
             </div><br>
 
-            <h1>Dangerzone</h1>
+            <h1>Danger zone</h1>
             <p>Please proceed with <strong>caution</strong> in this section because any action may cause <strong>permanent loss of data</strong></p>
             <div class="del">
                 <h1><b>Delete Account</b></h1>

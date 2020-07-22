@@ -134,7 +134,7 @@
 	    //     echo "travelId: " . $row["travelId"]. " - Travel class: " . $row["class"]. " " . $row["trip"]. "<br>";
 	    // }
 	} else {
-	    echo "0 results";
+	    echo "0 books";
 	}
 
 	// [RETRIVE ALL USER INFO]
@@ -142,7 +142,7 @@
 	$userresult = $db->query($querry_user);
 	if ($userresult->num_rows > 0) {
 	} else {
-	    echo "0 results";
+	    echo "0 info";
 	}
 	
 	// [UPDATE USER]
