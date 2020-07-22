@@ -31,15 +31,15 @@
                 <h1><b>Passengers traveling with Uganda Airlines</b></h1>
         <table id="t98">
             <tr>
-                <th><h1>travelId</h1></th>
+                <th><h1>Travel-Id</h1></th>
                 <th><h1>Traveler</h1></th>
-                <th><h1>trip</h1></th>
+                <th><h1>Trip</h1></th>
                 <th><h1>class</h1></th>
                 <th><h1>From</h1></th>
                 <th><h1>To</h1></th>
-                <th><h1>adults</h1></th>
-                <th><h1>children</h1></th>
-                <th><h1>infants</h1></th>
+                <th><h1>Adults</h1></th>
+                <th><h1>Children</h1></th>
+                <th><h1>Infants</h1></th>
             </tr>
             <?php include('../config/server.php') ?>
             <?php foreach($result as $booking):?>
