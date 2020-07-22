@@ -1,4 +1,4 @@
-
+<?php include('../config/server.php') ?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -29,10 +29,10 @@
     <main class="about">
         <div class="container">
             <center>
+                <?php include('errors.php'); ?>
                 <br>
                 <h1><b>My profile</b></h1>
         <table id="t9">
-            <?php include('../config/server.php') ?>
             <?php foreach($userresult as $userdetail):?>
             <tr>
                 <tr><th><h1>First-name</h1></th><td><?php echo $userdetail['fname']; ?></td></tr>
@@ -46,17 +46,28 @@
             <?php endforeach; ?>
         </table>
         <br>
+        <div class="upd">
+                <h1><b>Update Username</b></h1>
+                <form action="myprofile.php" method="post">
+                    <label for="oldUser" class="white">Enter Old Username:</label>
+                    <input type="text" name="olduser" id="oldUser" class="mb-3"><br>
+                    <label for="newUser" class="white">Enter New Username:</label>
+                    <input type="text" name="newuser" id="newUser" class="mb-3"><br>
+                    <button type="submit" class="btn btn-warning col-md-4" name="update_user">Update</button>
+                </form><br>
+            </div><br>
+
+            <h1>Dangerzone</h1>
+            <p>Please proceed with <strong>caution</strong> in this section because any action may cause <strong>permanent loss of data</strong></p>
             <div class="del">
                 <h1><b>Delete Account</b></h1>
-                <?php include('errors.php'); ?>
-
                 <form action="myprofile.php" method="post">
                     <label for="" class="white">Enter Password:</label>
                     <input type="password" name="password" class="mb-3">
                     <button type="submit" class="btn btn-warning col-md-4" name="delete_user">Delete Account</button>
                 </form><br>
             </div><br>
-            
+
             </center>
         </div>
 

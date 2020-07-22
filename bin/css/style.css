@@ -585,7 +585,7 @@ h4 {
 
 #airport,#crew,#comments,.carous{
   position: relative;
-  background-color: RGBA(39, 47, 51, 0.6);
+  background-color: rgba(39, 47, 51, 0.6);
 }
 .section-padding{
   padding-top: 20px;
@@ -667,15 +667,28 @@ th, td {
   padding: 15px 20px;
 }
 
-table#t98,table#t9 tr:nth-child(even) {
+table#t98 tr:nth-child(even) {
   color: black;
   background-color: rgba(238, 238, 238, 0.5);
 }
-table#t98,table#t9 tr:nth-child(odd) {
+table#t98 tr:nth-child(odd) {
   color: black;
   background-color: rgba(255, 255, 255, 0.5);
 }
-table#t98,table#t9 th {
+table#t98 th {
+  color: white;
+  background-color: rgb(94, 93, 93);
+}
+
+table#t9 tr:nth-child(even) {
+  color: black;
+  background-color: rgba(238, 238, 238, 0.5);
+}
+table#t9 tr:nth-child(odd) {
+  color: black;
+  background-color: rgba(255, 255, 255, 0.5);
+}
+table#t9 th {
   color: white;
   background-color: rgb(94, 93, 93);
 }
@@ -687,4 +700,9 @@ width: 300px;
   padding: 10px;
   position: relative;
   background-color: rgba(126, 60, 29, 0.6);
+}
+.upd{
+  padding: 10px;
+  position: relative;
+  background-color: rgba(39, 47, 51, 0.6);
 }

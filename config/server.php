@@ -125,18 +125,50 @@
 
 	}
 
-	// $sq = "UPDATE users SET lname='angie' WHERE id=2";
-	// // mysqli_query($db, $sq);
-	// if ($db->query($sq) === TRUE) {
-	//     // echo "Record updated successfully";
-	// } else {
-	//     echo "Error updating record: " . $db->error;
-	// }
+	
+	//[RETRIVE ALL BOOKINGS]
+	$querry_s = "SELECT * FROM bookings";
+	$result = $db->query($querry_s);
+	if ($result->num_rows > 0) {
+	    // while($row = $result->fetch_assoc()) {
+	    //     echo "travelId: " . $row["travelId"]. " - Travel class: " . $row["class"]. " " . $row["trip"]. "<br>";
+	    // }
+	} else {
+	    echo "0 results";
+	}
 
+	// [RETRIVE ALL USER INFO]
+	$querry_user = "SELECT * FROM users WHERE id='$_COOKIE[id]'";
+	$userresult = $db->query($querry_user);
+	if ($userresult->num_rows > 0) {
+	} else {
+	    echo "0 results";
+	}
+	
+	// [UPDATE USER]
+	if (isset($_POST['update_user'])) {
+		$olduser = mysqli_real_escape_string($db, $_POST['olduser']);
+		$newuser = mysqli_real_escape_string($db, $_POST['newuser']);
+
+		if (empty($olduser)) { array_push($errors, "Old username required!"); }
+		if (empty($newuser)) { array_push($errors, "New username required!"); }
+		// if ($olduser != $_SESSION['username']) { array_push($errors, "Usernames do not match!");}
+
+		if (count($errors) == 0) {
+			$query = "UPDATE users SET username='$newuser' WHERE id='$_COOKIE[id]'";
+			mysqli_query($db, $query);
+
+			$_SESSION['username'] = $newuser;
+			header('location: myprofile.php');
+		}
+	
+	}
+
+	//[DELETE USER]
 	if (isset($_POST['delete_user'])) {
 		$password = mysqli_real_escape_string($db, $_POST['password']);
 
-		if (empty($password)) { array_push($errors, "Password is required!"); }
+		if (empty($password)) { array_push($errors, "Password is required inorder to Delete!"); }
 		// if ($password != $password) {
 		// 	array_push($errors, "Password does not match!");
 		// }
@@ -151,29 +183,4 @@
 		}
 	
 	}
-
-	// $sq2 = "DELETE FROM users WHERE id='$_COOKIE[id]'";
-	// if ($db->query($sq2) === TRUE) {
-	//     // echo "Record deleted successfully";
-	// } else {
-	//     echo "Error deleting record: " . $db->error;
-	// }
-
-	$querry_s = "SELECT * FROM bookings";
-	$result = $db->query($querry_s);
-	if ($result->num_rows > 0) {
-	    // while($row = $result->fetch_assoc()) {
-	    //     echo "travelId: " . $row["travelId"]. " - Travel class: " . $row["class"]. " " . $row["trip"]. "<br>";
-	    // }
-	} else {
-	    echo "0 results";
-	}
-
-	$querry_user = "SELECT * FROM users WHERE id='$_COOKIE[id]'";
-	$userresult = $db->query($querry_user);
-	if ($userresult->num_rows > 0) {
-	} else {
-	    echo "0 results";
-    }
-
 ?>

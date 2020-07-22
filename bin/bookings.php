@@ -35,6 +35,8 @@
                 <th><h1>Traveler</h1></th>
                 <th><h1>trip</h1></th>
                 <th><h1>class</h1></th>
+                <th><h1>From</h1></th>
+                <th><h1>To</h1></th>
                 <th><h1>adults</h1></th>
                 <th><h1>children</h1></th>
                 <th><h1>infants</h1></th>
@@ -46,6 +48,8 @@
                 <td><?php echo $booking['username']; ?></td>
                 <td><?php echo $booking['trip']; ?></td>
                 <td><?php echo $booking['class']; ?></td>
+                <td><?php echo $booking['dport']; ?></td>
+                <td><?php echo $booking['aport']; ?></td>
                 <td><?php echo $booking['adults']; ?></td>
                 <td><?php echo $booking['children']; ?></td>
                 <td><?php echo $booking['infants']; ?></td>

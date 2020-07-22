@@ -36,15 +36,15 @@
         <?php include('errors.php'); ?>
         <div class="form-row">
           <div class="custom-control custom-radio col-md-4 mb-3">
-            <input id="one" name="trip" type="radio" value="oneway" class="custom-control-input" checked required>
+            <input id="one" name="trip" type="radio" value="One-way" class="custom-control-input" checked required>
             <label class="custom-control-label white" for="one">One Way</label>
           </div>
           <div class="custom-control custom-radio col-md-4 mb-3">
-            <input id="round" name="trip" type="radio" value="roundtrip" class="custom-control-input" required>
+            <input id="round" name="trip" type="radio" value="Round-trip" class="custom-control-input" required>
             <label class="custom-control-label white" for="round">Round Trip</label>
           </div>
           <div class="custom-control custom-radio col-md-4 mb-3">
-            <input id="multi" name="trip" type="radio" value="Multi" class="custom-control-input" required>
+            <input id="multi" name="trip" type="radio" value="Multi-Directional" class="custom-control-input" required>
             <label class="custom-control-label white" for="multi">Multi Directional</label>
           </div>
         </div><br>
@@ -131,15 +131,15 @@
         <h2>Class of travel</h2>
         <div class="form-row">
           <div class="custom-control custom-checkbox col-md-4 mb-3">
-            <input id="economy" name="class" type="radio" value="Econ" class="custom-control-input" checked required>
+            <input id="economy" name="class" type="radio" value="Economy" class="custom-control-input" checked required>
             <label class="custom-control-label white" for="economy">Economy</label>
           </div>
           <div class="custom-control custom-checkbox col-md-4 mb-3">
-            <input id="business" name="class" type="radio" value="Buss" class="custom-control-input" required>
+            <input id="business" name="class" type="radio" value="Business" class="custom-control-input" required>
             <label class="custom-control-label white" for="business">Business</label>
           </div>
           <div class="custom-control custom-checkbox col-md-4 mb-3">
-            <input id="first" name="class" type="radio" value="First" class="custom-control-input" required>
+            <input id="first" name="class" type="radio" value="First-class" class="custom-control-input" required>
             <label class="custom-control-label white" for="first">First Class</label>
           </div>
         </div>
