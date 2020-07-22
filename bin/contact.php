@@ -1,5 +1,5 @@
 <?php
-require('../config/create.php');
+require('../config/server.php');
 
 	if (isset($_POST['place_comment'])) {
 		$comment = mysqli_real_escape_string($db, $_POST['comment']);
@@ -141,14 +141,15 @@ require('../config/create.php');
         <br>
       </center>
     </div>
-<!--     
+    
    <section id="comments" class="home-comments">
       <div class="container">
         <div class="row">
-        <form method="post" action="index.php" class="needs-validation">
-        <?php include('errors.php'); ?>
+        <form method="post" action="contact.php" class="needs-validation">
+        
           <div class="col-sm-12">
             <div class="single"><br>
+            <?php include('errors.php'); ?>
               <div class="form-group">
               <label for="commentTextarea"><h2><b>Leave a Comment</b></h2></label>
               <textarea class="form-control mb-4" id="commentTextarea"  name="comment" placeholder="Enter your comment" width="600px" rows="3"></textarea>
@@ -162,7 +163,7 @@ require('../config/create.php');
 
         </div>
       </div>
-    </section><br> -->
+    </section><br>
 
     <footer id="o-footer" class="abst" role="contentinfo">
       <div class="o-container">

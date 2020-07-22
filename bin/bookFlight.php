@@ -145,7 +145,7 @@
         </div>
 
         <div class="input-group serh">
-        <button type="button" class="btn btn-warning">Search Flight</button>
+        <button type="button" class="btn btn-warning" disabled>Search Flight</button>
         </div>
         <br><br>
         <hr class="mb-4">
