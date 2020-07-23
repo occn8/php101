@@ -72,8 +72,8 @@ if ($userresult->num_rows > 0) {
             <div class="del">
                 <h1><b>Delete Account</b></h1>
                 <form action="myprofile.php" method="post">
-                    <label for="" class="white">Enter Password:</label>
-                    <input type="password" name="password" class="mb-3">
+                    <label for="" class="white">Enter Username:</label>
+                    <input type="text" name="pass" class="mb-3">
                     <button type="submit" class="btn btn-warning col-md-4" name="delete_user">Delete Account</button>
                 </form><br>
             </div><br>

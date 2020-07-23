@@ -69,15 +69,13 @@
 			$password = md5($password);
 			$query = "SELECT * FROM users WHERE username='$username' AND password='$password'";
 			$results = mysqli_query($db, $query);
-			$user_id = mysqli_insert_id($db);
-			setcookie('id', $user_id, time() + (86400 * 2), "/");
 
 			if (mysqli_num_rows($results) == 1) {
 				$_SESSION['username'] = $username;
 				$_SESSION['success'] = "You are logged in";
 				
-
-				
+				$user_id = mysqli_insert_id($db);
+				setcookie('id', $user_id, time() + (86400 * 2), "/");
 				header('location: index.php');
 			}else {
 				array_push($errors, "Wrong username, Password combination");
@@ -148,8 +146,11 @@
 		$newuser = mysqli_real_escape_string($db, $_POST['newuser']);
 
 		if (empty($olduser)) { array_push($errors, "Old username required!"); }
+		else{
+			if ($olduser != $_SESSION['username']) { array_push($errors, "Old Username does not match!");}
+		}
 		if (empty($newuser)) { array_push($errors, "New username required!"); }
-		// if ($olduser != $_SESSION['username']) { array_push($errors, "Usernames do not match!");}
+		
 
 		if (count($errors) == 0) {
 			$query = "UPDATE users SET username='$newuser' WHERE username='$_SESSION[username]'";
@@ -163,12 +164,14 @@
 
 	//[DELETE USER]
 	if (isset($_POST['delete_user'])) {
-		$password = mysqli_real_escape_string($db, $_POST['password']);
+		$pass = mysqli_real_escape_string($db, $_POST['pass']);
 
-		if (empty($password)) { array_push($errors, "Password is required inorder to Delete!"); }
-		// if ($password != $password) {
-		// 	array_push($errors, "Password does not match!");
-		// }
+		if (empty($pass)) { array_push($errors, "Username is required inorder to Delete!"); }
+		else {
+			if ($pass != $_SESSION['username']) {
+				array_push($errors, "Username does not match!");
+			}
+		}
 
 		if (count($errors) == 0) {
 			$query = "DELETE FROM users WHERE username='$_SESSION[username]'";
