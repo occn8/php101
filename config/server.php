@@ -69,13 +69,15 @@
 			$password = md5($password);
 			$query = "SELECT * FROM users WHERE username='$username' AND password='$password'";
 			$results = mysqli_query($db, $query);
+			$user_id = mysqli_insert_id($db);
+			setcookie('id', $user_id, time() + (86400 * 2), "/");
 
 			if (mysqli_num_rows($results) == 1) {
 				$_SESSION['username'] = $username;
 				$_SESSION['success'] = "You are logged in";
-				$user_id = mysqli_insert_id($db);
+				
 
-				setcookie('id', $user_id, time() + (86400 * 2), "/");
+				
 				header('location: index.php');
 			}else {
 				array_push($errors, "Wrong username, Password combination");
@@ -137,13 +139,8 @@
 	    echo "0 books";
 	}
 
-	// [RETRIVE ALL USER INFO]
-	$querry_user = "SELECT * FROM users WHERE id='$_COOKIE[id]'";
-	$userresult = $db->query($querry_user);
-	if ($userresult->num_rows > 0) {
-	} else {
-	    echo "0 info";
-	}
+	
+
 	
 	// [UPDATE USER]
 	if (isset($_POST['update_user'])) {
@@ -155,7 +152,7 @@
 		// if ($olduser != $_SESSION['username']) { array_push($errors, "Usernames do not match!");}
 
 		if (count($errors) == 0) {
-			$query = "UPDATE users SET username='$newuser' WHERE id='$_COOKIE[id]'";
+			$query = "UPDATE users SET username='$newuser' WHERE username='$_SESSION[username]'";
 			mysqli_query($db, $query);
 
 			$_SESSION['username'] = $newuser;
@@ -174,7 +171,7 @@
 		// }
 
 		if (count($errors) == 0) {
-			$query = "DELETE FROM users WHERE id='$_COOKIE[id]'";
+			$query = "DELETE FROM users WHERE username='$_SESSION[username]'";
 			mysqli_query($db, $query);
 
 			session_destroy();

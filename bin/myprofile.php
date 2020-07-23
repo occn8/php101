@@ -1,4 +1,5 @@
 
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -16,7 +17,15 @@
     <title>Uganda Airlines</title>
 
 </head>
-
+<?php include('../config/server.php');
+// [RETRIVE ALL USER INFO]
+$querry_user = "SELECT * FROM users WHERE username='$_SESSION[username]'";
+$userresult = $db->query($querry_user);
+if ($userresult->num_rows > 0) {
+} else {
+    echo "'$_SESSION[username]' info";
+}
+?>
 <body>
     <div id="stripes" class="fixed">
         <span></span>
@@ -28,11 +37,12 @@
     <main class="about">
         <div class="container">
             <center>
-            <?php include('../config/server.php') ?>
+            
                 <?php include('errors.php'); ?>
                 <br>
                 <h1><b>My profile</b></h1>
         <table id="t9">
+           
             <?php foreach($userresult as $userdetail):?>
             <tr>
                 <tr><th><h1>First-name</h1></th><td><?php echo $userdetail['fname']; ?></td></tr>
