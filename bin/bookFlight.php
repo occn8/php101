@@ -81,7 +81,7 @@
         <div class="form-row">
           <div class="col-md-4 mb-3">
             <label for="" class="white">Departure Date</label>
-            <input class="form-control" type="date" required>
+            <input class="form-control" type="date" name="ddate" required>
             <div class="invalid-feedback">
               Please provide a valid Date.
             </div>

@@ -40,8 +40,8 @@
 		// [register]
 		if (count($errors) == 0) {
 			$password = md5($password_1);
-			$query = "INSERT INTO users (fname, lname, username, email, address, country, district, zip, password) 
-					  VALUES('$fname','$lname', '$username', '$email', '$address', '$country', '$district', '$zip', '$password')";
+			$query = "INSERT INTO users (fname, lname, username, email, regdate, address, country, district, zip, password) 
+					  VALUES('$fname','$lname', '$username', '$email', NOW(), '$address', '$country', '$district', '$zip', '$password')";
 			mysqli_query($db, $query);
 			$user_id = mysqli_insert_id($db);
 
@@ -88,6 +88,7 @@
 		$trip = mysqli_real_escape_string($db, $_POST['trip']);
 		$dport = mysqli_real_escape_string($db, $_POST['dport']);
 		$aport = mysqli_real_escape_string($db, $_POST['aport']);
+		$ddate = mysqli_real_escape_string($db, $_POST['ddate']);
 		$adults = mysqli_real_escape_string($db, $_POST['adults']);
 		$children = mysqli_real_escape_string($db, $_POST['children']);
 		$infants = mysqli_real_escape_string($db, $_POST['infants']);
@@ -101,6 +102,7 @@
 		if (empty($trip)) { array_push($errors, "Trip is required!"); }
 		if (empty($dport)) { array_push($errors, "Departure port is required!"); }
 		if (empty($aport)) { array_push($errors, "Arrival port is required!"); }
+		if (empty($ddate)) { array_push($errors, "Departure date is required!"); }
 		if (empty($adults)) { array_push($errors, "Adult number is required!"); }
 		// if (empty($children)) { array_push($errors, "children number is required"); }
 		// if (empty($infants)) { array_push($errors, "Infant number is required"); }
@@ -115,8 +117,8 @@
 		}
 
 		if (count($errors) == 0) {
-			$query = "INSERT INTO bookings (username, trip, dport, aport, adults, children, infants, class, paymentMethod, ccname, ccnum, ccexp, cvv) 
-					  VALUES('$_SESSION[username]','$trip','$dport', '$aport', '$adults', '$children', '$infants', '$class', '$paymentMethod', '$ccname', '$ccnum', '$ccexp', '$cvv')";
+			$query = "INSERT INTO bookings (username, trip, dport, aport, bookdate, ddate, adults, children, infants, class, paymentMethod, ccname, ccnum, ccexp, cvv) 
+					  VALUES('$_SESSION[username]','$trip','$dport', '$aport', NOW(), '$ddate', '$adults', '$children', '$infants', '$class', '$paymentMethod', '$ccname', '$ccnum', '$ccexp', '$cvv')";
 			mysqli_query($db, $query);
 
 			$_SESSION['booked'] = "Booked successfuly";

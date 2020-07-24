@@ -17,6 +17,7 @@ $sql = "CREATE TABLE IF NOT EXISTS users (
     lname VARCHAR(30) NOT NULL,
     username VARCHAR(30) NOT NULL,
     email VARCHAR(50),
+    regdate DATE,
     address VARCHAR(20) NOT NULL,
     country VARCHAR(20),
     district VARCHAR(20),
@@ -31,6 +32,8 @@ $sql2 = "CREATE TABLE IF NOT EXISTS bookings (
     trip VARCHAR(20) NOT NULL,
     dport VARCHAR(30) NOT NULL,
     aport VARCHAR(30) NOT NULL,
+    bookdate DATE,
+    ddate DATE NOT NULL,
     adults VARCHAR(5),
     children VARCHAR(5),
     infants VARCHAR(5),
@@ -38,7 +41,7 @@ $sql2 = "CREATE TABLE IF NOT EXISTS bookings (
     paymentMethod VARCHAR(20),
     ccname VARCHAR(30),
     ccnum VARCHAR(30),
-    ccexp VARCHAR(30),
+    ccexp DATE,
     cvv VARCHAR(10)
     )";
     mysqli_query($db, $sql2);
