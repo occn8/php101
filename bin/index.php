@@ -1,5 +1,23 @@
 <?php 
-	session_start(); 
+  // session_start(); 
+  require('../config/server.php');
+
+	if (isset($_POST['place_comment'])) {
+		$comment = mysqli_real_escape_string($db, $_POST['comment']);
+
+	
+		if (empty($comment)) {
+			array_push($errors, "comment is required");
+		}
+
+		if (count($errors) == 0) {
+			$query = "INSERT INTO comments (username, comment) 
+					  VALUES('$_SESSION[username]', '$comment')";
+			mysqli_query($db, $query);
+
+			header('location: index.php');
+		}
+	}
 
 	if (!isset($_SESSION['username'])) {
 		$_SESSION['msg'] = "You must log in first";
@@ -213,23 +231,29 @@
       <br>
     </div>
 </section>
+
     <section id="comments" class="home-comments">
       <div class="container">
         <div class="row">
+        <form method="post" action="contact.php" class="needs-validation">
+        
           <div class="col-sm-12">
             <div class="single"><br>
+            <?php include('errors.php'); ?>
               <div class="form-group">
-              <label for="commentTextarea"><h2><b>Comments</b></h2></label>
-              <textarea class="form-control mb-4" id="commentTextarea" placeholder="Enter your comment" width="200px" rows="3"></textarea>
+              <label for="commentTextarea"><h2><b>Leave a Comment</b></h2></label>
+              <textarea class="form-control mb-4" id="commentTextarea"  name="comment" placeholder="Enter your comment" width="600px" rows="3"></textarea>
               <span class="input-group-btn">
-                  <button class="btn btn-warning" type="submit">Comment</button>
+             
+                  <button class="btn btn-warning" type="submit" name="place_comment">Comment</button>
                 </span>
             </div><br>
             </div>
           </div>
+
         </div>
       </div>
-    </section>
+    </section><br>
 
     <section class="home-newsletter">
       <div class="container">

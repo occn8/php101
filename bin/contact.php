@@ -14,7 +14,7 @@ require('../config/server.php');
 					  VALUES('$_SESSION[username]', '$comment')";
 			mysqli_query($db, $query);
 
-			header('location: contact.php');
+			header('location: index.php');
 		}
 	}
 ?>
