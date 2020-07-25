@@ -20,11 +20,12 @@
 
 <body class="bg-light">
     <div id="stripes" class="fixed">
+        <span><img src="images/undraw_businesswoman_pc12.svg" alt="HTML5 Icon" style="width:240px;height:250px;background-color:rgb(177, 255, 51);"></span>
+        <span><img src="images/undraw_travelers_qlt1.svg" alt="HTML5 Icon" style="width:300px;height:170px;background-color:#e42929;border-top-left-radius: 20%;"></span>
         <span></span>
+        <span><img src="images/undraw_around_the_world_v9nu.svg" alt="HTML5 Icon" style="padding-top:20px;padding-left:20px;width:200px;height:160px;background-color:#52ff0d;border-bottom-left-radius: 20px;"></span>
         <span></span>
-        <span></span>
-        <span></span>
-        <span></span>
+
     </div>
   
 <div class="form-container">

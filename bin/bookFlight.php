@@ -147,8 +147,9 @@
         <div class="input-group serh">
         <button type="button" class="btn btn-warning" disabled>Search Flight</button>
         </div>
-        <br><br>
+        <br>
         <hr class="mb-4">
+        <img src="images/undraw_connected_world_wuay.svg" alt="HTML5 Icon" style="width:300px;height:200px;">
 
         <h2 class="mb-3"><b>Payment</b></h2>
 
