@@ -28,6 +28,9 @@ __`Register screen`__
 __`Update & Delete screen`__
 <img src="screen3.png" />
 
+__`Select-all screen`__
+<img src="screen4.png" />
+
 ### License
 
     Copyright 2020 ochen hillary
