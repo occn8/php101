@@ -3,8 +3,7 @@
 ___
 
 ## Uganda Airlines Website
-
-<img src="./bin/favicon.ico" width="250px" />
+<!-- <img src="./bin/favicon.ico" width="250px" /> -->
 ___
 
 ### responsive Airline website
@@ -18,6 +17,16 @@ ___
 * [x] __Move__ the project folder(php101) to location 'PWD'/lampp/htdocs/
 * [x] __Then__ Paste this URL `http://localhost/php101/bin/index.php` to your browser
 * [x] __Done__
+
+## Screenshots
+__`LogIn screen`__
+<img src="screen1.png" />
+
+__`Register screen`__
+<img src="screen2.png" />
+
+__`Update & Delete screen`__
+<img src="screen3.png" />
 
 ### License
 
@@ -34,14 +43,3 @@ ___
     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
     See the License for the specific language governing permissions and
     limitations under the License.
-
-
-## Screenshots
-`LogIn screen`
-<img src="screen1.png" />
-
-`___Register screen___`
-<img src="screen2.png" />
-
-`Update & Delete screen`
-<img src="screen3.png" />
