@@ -2,11 +2,11 @@
 # __PHP Project__
 ___
 
-## Uganda Airlines Website
+## Uganda Airlines Web Application
 <!-- <img src="./bin/favicon.ico" width="250px" /> -->
 ___
 
-### responsive Airline website
+### A responsive Airline website
 > Based off the Uganda Airlines website.
 
 ### Designed By
@@ -14,8 +14,8 @@ ___
 
 ## Running Project
 * [x] __Make sure__ xampp or `any-other` is started or running
-* [x] __Move__ the project folder(php101) to location 'PWD'/lampp/htdocs/
-* [x] __Then__ Paste this URL `http://localhost/php101/bin/index.php` to your browser
+* [x] __Move__ the project folder(__php101__) to location 'PWD'/lampp/htdocs/
+* [x] __Then__ Paste this URL __`http://localhost/php101/bin/index.php`__ to your browser
 * [x] __Done__
 
 ## Screenshots
