@@ -53,6 +53,34 @@ $sql3 = "CREATE TABLE IF NOT EXISTS comments (
     )";
     mysqli_query($db, $sql3);
 
+
+$bokins = "INSERT INTO `bookings` (`travelId`, `username`, `trip`, `dport`, `aport`, `bookdate`, `ddate`, `adults`, `children`, `infants`, `class`, `paymentMethod`, `ccname`, `ccnum`, `ccexp`, `cvv`) VALUES
+    (1, 'lary', 'Round-trip', 'Dubai', 'Detrioit', '2020-07-25', '2020-08-07', '2', '0', '0', 'First-class', 'Credit', 'warrior', '737425633754', '2020-04-06', '777'),
+    (2, 'tasha', 'One-way', 'Detrioit', 'JFK', '2020-07-25', '2020-08-08', '2', '0', '0', 'Business', 'Debit', 'warman', '371457824698978', '2022-04-07', '787'),
+    (3, 'tom', 'Multi-Directional', 'Entebbe', 'Nairobi', '2020-07-25', '2020-07-31', '1', '2', '1', 'Economy', 'Master', 'famo', '52416869661046', '2021-04-06', '454'),
+    (4, 'man', 'One-way', 'Detrioit', 'Nairobi', '2020-07-25', '2020-07-31', '2', '1', '2', 'Business', 'Debit', 'yumm', '231599y71482621', '2022-04-02', '455')";
+    mysqli_query($db, $bokins);
+    
+$commt = "INSERT INTO `comments` (`commentId`, `username`, `comment`) VALUES
+    (1, 'lary', 'flight time was short and sweet'),
+    (2, 'tasha', 'i would luv to fly again with ug air'),
+    (3, 'tom', 'family friendly'),
+    (4, 'tasha', 'amazing staff'),
+    (5, 'lary', 'wooow good'),
+    (6, 'tom', 'black flight rules....yeah'),
+    (7, 'tom', 'God  luv commenting'),
+    (8, 'tom', 'speechless'),
+    (9, 'man', 'good flight crew')";
+    mysqli_query($db, $commt);
+
+$usr = "INSERT INTO `users` (`id`, `fname`, `lname`, `username`, `email`, `regdate`, `address`, `country`, `district`, `zip`, `password`) VALUES
+    (1, 'ochen', 'hillary', 'lary', 'lary@oc.com', '2020-07-25', '1st st', 'Uganda', 'Kampala', '9090', '202cb962ac59075b964b07152d234b70'),
+    (2, 'natasha', 'angella', 'tasha', 'tasha@ta.com', '2020-07-25', '1st st', 'Uganda', 'Kampala', '9090', '202cb962ac59075b964b07152d234b70'),
+    (3, 'tommy', 'jerry', 'tom', 'tomus@to.com', '2020-07-25', '18 th', 'Uganda', 'Entebbe', '8764', '202cb962ac59075b964b07152d234b70'),
+    (4, 'mandem', 'seh', 'man', 'man@men.com', '2020-07-25', '12wt', 'Uganda', 'Entebbe', '7843', '202cb962ac59075b964b07152d234b70')";
+    mysqli_query($db, $usr);
+
+    
 // $sql4 = "CREATE TABLE IF NOT EXISTS prices (
 //     priceId INT(6) UNSIGNED AUTO_INCREMENT PRIMARY KEY,
 //     from VARCHAR(30) NOT NULL,
