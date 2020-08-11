@@ -30,7 +30,7 @@
   
 <div class="form-container">
   <center>
-    <form class="form-signin" method="post" action="logIn.php">
+    <form class="form-signin needs-validation" method="post" action="logIn.php" novalidate>
     <?php include('errors.php'); ?>
         <div class="text-center mb-4">
             <img class="mb-4" src="images/logo.png" alt="" width="72" height="72">
@@ -46,11 +46,17 @@
         <div class="form-label-group">
             <input type="text" name="username" id="inputName" class="form-control" placeholder="Username" required autofocus>
             <label for="inputName" style="text-align: left; float: left;">Username</label>
+            <div class="invalid-feedback">
+            Valid UserName is required.
+          </div>
         </div>
 
         <div class="form-label-group">
             <input type="password" name="password" id="inputPassword" class="form-control" placeholder="Password" required>
             <label for="inputPassword" style="text-align: left; float: left;">Password</label>
+            <div class="invalid-feedback">
+            Valid Password is required.
+          </div>
         </div>
 
         <div class="checkbox mb-3">
@@ -69,6 +75,23 @@
     </center>
  </div>
  
+ <script>
+  (function() {
+    'use strict';
+    window.addEventListener('load', function() {
+      var forms = document.getElementsByClassName('needs-validation');
+      var validation = Array.prototype.filter.call(forms, function(form) {
+        form.addEventListener('submit', function(event) {
+          if (form.checkValidity() === false) {
+            event.preventDefault();
+            event.stopPropagation();
+          }
+          form.classList.add('was-validated');
+        }, false);
+      });
+    }, false);
+  })();
+  </script>
     <script src="js/jquery.min.js"></script>
     <script src="js/jquery.easing.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
